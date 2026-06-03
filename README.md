@@ -6,12 +6,16 @@ Este proyecto es una Single Page Application (SPA) moderna y responsiva, diseña
 
 Está inspirada en la estética tradicional japonesa, reflejando disciplina, equilibrio y una profunda dedicación al arte de programar.
 
-> ⚠️ **Nota:** Este portfolio fue concebido originalmente utilizando React Router como un ejercicio personal para consolidar mis conocimientos en enrutamiento dinámico. Sin embargo, priorizando la experiencia de usuario (UX), la velocidad de carga y una navegación más fluida para el usuario final, decidí refactorizar el proyecto en esta arquitectura SPA (Single Page Application). Puedes consultar el repositorio original con todo el historial de desarrollo aquí:
+> ⚠️ **Nota:** Este portfolio fue concebido originalmente utilizando React Router como un ejercicio personal para consolidar mis conocimientos.
+>
+> Sin embargo, priorizando la experiencia de usuario (UX), la velocidad de carga y una navegación más fluida para el usuario final, decidí refactorizar el proyecto en esta arquitectura SPA (Single Page Application).
+>
+> Puedes consultar el repositorio original con todo el historial de desarrollo aquí:
 > 👉 (https://github.com/Colet-Cristina/portfolio-mi-senda-digital).
 
-> "Cultivando soluciones, gestionando entornos, escribiendo código."
-
----
+```bash
+ "Cultivando soluciones, gestionando entornos, escribiendo código."
+```
 
 ## 🌸 La Filosofía del Proyecto (Las Semillas de Código)
 
