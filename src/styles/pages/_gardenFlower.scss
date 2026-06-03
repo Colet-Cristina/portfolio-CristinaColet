@@ -1,0 +1,134 @@
+/* --- GARDEN FLOWER: Animación y Estados --- */
+
+.flower-container {
+  width: 12rem;
+  height: 12rem;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // Animación ambiental: Simula el balanceo por el viento
+  animation: plantSway 6s ease-in-out infinite;
+
+  .is-center & {
+    animation: plantSway 6s ease-in-out infinite;
+    transform-origin: bottom center;
+    transform: scale(1.1);
+  }
+  /* --- ESTRUCTURA FLOR --- */
+  // Tallo
+  .flower-stem {
+    position: absolute;
+    top: 5.5rem;
+    width: 0.4rem;
+    height: 6rem;
+    background: linear-gradient(to bottom, #5d7d50, #2e402e);
+    z-index: 1;
+    transition: height 1s ease;
+  }
+
+  // Hojas
+  .flower-leaf {
+    position: absolute;
+    top: 8.5rem;
+    width: 1.5rem;
+    height: 1rem;
+    background: #5d7d50;
+    z-index: 1;
+    transition: all 1s ease;
+
+    &.leaf-left {
+      left: 35%;
+      border-radius: 1rem 0 1rem 0;
+      transform: rotate(60deg);
+    }
+
+    &.leaf-right {
+      right: 35%;
+      border-radius: 0 1rem 0 1rem;
+      transform: rotate(-60deg);
+    }
+  }
+
+  /* --- ANATOMÍA DEL SVG --- */
+  .lotus-flower {
+    position: relative;
+    z-index: 2;
+    overflow: visible;
+    width: 100%;
+    filter: drop-shadow(0 0.625rem 0.9375rem rgba(0, 0, 0, 0.15));
+
+    // Colores flor cerrada
+    .petal-l,
+    .petal-r,
+    .petal-center {
+      transition:
+        fill 1.2s ease,
+        transform 1.5s ease,
+        stroke 1s ease;
+    }
+
+    // Los pétalos vuelven a su posición 0 (posición de apertura del SVG)
+    .petal-l,
+    .petal-r {
+      fill: #f0879f;
+      transform-origin: 50% 80%;
+    }
+
+    .petal-center {
+      fill: #f2a2b1;
+    }
+  }
+
+  /* --- ESTADO: FLOR ABIERTA (ACTIVA) --- */
+  &.is-active {
+    #l1,
+    #r1 {
+      fill: #fae3e9;
+    } // Internos
+    #l2,
+    #r2 {
+      fill: #eb6383;
+    } // Medios
+    #l3,
+    #r3 {
+      fill: #c84b6b;
+    } // Exteriores
+
+    #center {
+      stroke: #f2a2b1;
+    }
+
+    .petal-l,
+    .petal-r {
+      transform: rotate(0deg);
+    }
+
+    .lotus-shadow {
+      rx: 9.375rem;
+    }
+  }
+
+  // Ángulos de cierre
+  &:not(.is-active) {
+    #l1 {
+      transform: rotate(11deg);
+    }
+    #l2 {
+      transform: rotate(18deg);
+    }
+    #l3 {
+      transform: rotate(33deg);
+    }
+    #r1 {
+      transform: rotate(-11deg);
+    }
+    #r2 {
+      transform: rotate(-18deg);
+    }
+    #r3 {
+      transform: rotate(-33deg);
+    }
+  }
+}

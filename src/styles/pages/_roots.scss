@@ -1,0 +1,172 @@
+.roots {
+  position: relative;
+  min-height: 100vh;
+  height: auto;
+  overflow: hidden;
+
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  font-family: $font-body;
+  color: $text-color;
+
+  background-image: url("/src/images/design/background-movil.png");
+  background-position: inherit;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+
+  /* CONTENEDOR DE CAPAS */
+  &__layers {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; // Para que no te impida hacer scroll o click
+  }
+
+  &__layer {
+    position: absolute;
+
+    &--torii {
+      top: 8rem;
+      width: 15rem;
+    }
+
+    &--bridge {
+      top: 33rem;
+      right: 1rem;
+      left: auto;
+      width: 15rem;
+      transform: translateY(-50%);
+    }
+  }
+
+  /*  TÍTULO  */
+  &__container {
+    align-self: center;
+    margin-top: 2rem;
+    max-width: 100%;
+
+    animation: fadeInUp 1.2s ease forwards;
+  }
+  &__main-title {
+    font-family: $font-japanese;
+    font-size: 3rem;
+    color: $color-red;
+    text-align: center;
+    line-height: 1;
+  }
+
+  &__title {
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+    color: $color-darkGreen;
+    font-weight: bold;
+    opacity: 0.8;
+  }
+
+  /* HISTORIA  */
+  &__story {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+
+  &__text {
+    font-weight: bolder;
+    max-width: 65%;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+
+    /* Posicionamiento por bloques */
+    &:nth-of-type(1) {
+      align-self: flex-end;
+      text-align: right;
+      animation-delay: 0.8s;
+      padding-bottom: 3rem;
+    }
+
+    &:nth-of-type(2) {
+      align-self: flex-start;
+      text-align: left;
+      animation-delay: 1s;
+      padding-bottom: 3rem;
+    }
+
+    &--highlight {
+      align-self: center;
+      text-align: center;
+      max-width: 90%;
+      color: $tatami-borde;
+      font-weight: 700;
+      margin-top: 3rem;
+      animation-delay: 1.6s;
+    }
+  }
+}
+
+/* --- MEDIA QUERIES (TABLET) --- */
+@media (min-width: $breakpoint-tablet) {
+  .roots {
+    background-image: url("/src/images/design/roots-background.png");
+    background-attachment: fixed;
+
+    &__layers {
+      display: none;
+    }
+
+    &__container {
+      max-width: 80%;
+    }
+
+    &__main-title {
+      font-size: 4.5rem;
+    }
+
+    &__story {
+      margin-top: 3rem;
+    }
+
+    &__text {
+      max-width: 35rem;
+      margin-bottom: 2rem;
+
+      &:nth-of-type(1),
+      &:nth-of-type(2) {
+        align-self: flex-start;
+        text-align: right;
+        margin-top: 0;
+      }
+
+      &--highlight {
+        align-self: flex-start;
+        text-align: left;
+        padding: 0;
+        margin-top: 1rem;
+      }
+    }
+  }
+}
+
+/* --- MEDIA QUERIES (DESKTOP) --- */
+@media (min-width: $breakpoint-desktop) {
+  .roots {
+    &__container {
+      margin-left: 6%;
+      margin-top: 3rem;
+    }
+
+    &__main-title {
+      font-size: 6rem;
+    }
+
+    &__text {
+      font-size: 1.25rem;
+      max-width: 40rem;
+    }
+  }
+}

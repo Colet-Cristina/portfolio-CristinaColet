@@ -1,0 +1,280 @@
+/* --- TOOLS:  Galería de habilidades con estética tradicional japonesa. --- */
+
+/* --- Tools --- */
+.tools {
+  background-color: $color-pared;
+  min-height: 100vh;
+  height: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 0;
+  overflow: hidden;
+
+  /* --- Elementos de Ambiente --- */
+
+  /* Biga madera  */
+  &__ceiling {
+    position: absolute;
+    top: 1.5rem;
+
+    width: 100%;
+    z-index: 10;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2rem;
+      background-color: $color-wood;
+      box-shadow: $shadow-strong;
+      z-index: 11;
+    }
+  }
+
+  /* Revestimiento de madera */
+  &__wall {
+    position: absolute;
+    bottom: 8.5vh;
+    left: 0;
+    width: 100%;
+    height: 15%;
+    background-color: $color-wood;
+
+    border-top: 1rem solid darken($color-wood, 5%);
+    border-bottom: 1rem solid darken($color-wood, 5%);
+
+    background-image: 
+      // Líneas de los bordes negros
+      repeating-linear-gradient(
+        to right,
+        $color-wood,
+        rgba($tatami-borde, 0.6) 0.4rem,
+        transparent 0.4rem,
+        transparent 14rem
+      ),
+      // Efecto de textura de paja
+      repeating-linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0.08) 0,
+          rgba(0, 0, 0, 0.05) 0.1875rem,
+          transparent 0.125rem,
+          transparent 0.75rem
+        );
+  }
+
+  /* Suelo  */
+  &__floor {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10vh;
+    background-color: $tatami-paja;
+    z-index: 8;
+
+    background-image:
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, transparent 40%),
+      // Líneas de los bordes negros
+      repeating-linear-gradient(
+          to right,
+          $tatami-borde,
+          $tatami-borde 0.4rem,
+          transparent 0.4rem,
+          transparent 12rem
+        ),
+      // Efecto de textura de paja
+      repeating-linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.08) 0,
+          rgba(0, 0, 0, 0.05) 0.1875rem,
+          transparent 0.125rem,
+          transparent 0.375rem
+        );
+    transform: perspective(6.25rem) rotateX(7deg) scaleX(1.3);
+    transform-origin: bottom;
+    box-shadow: $sombra-inner;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 15; // Por encima de la arquitectura
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10rem 1rem 20vh 1rem;
+
+    /* --- Katanas Decorativas --- */
+    &--katanas {
+      position: relative; // Asegura que el pseudoelemento se posicione respecto a esto
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1; // Se queda detrás del contenido
+
+        background-image: url("/katanas.png");
+        background-repeat: no-repeat;
+        background-position: center bottom 93%;
+        background-size: 20rem 5rem;
+
+        opacity: 0.9;
+        filter: drop-shadow(0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.7));
+      }
+    }
+  }
+
+  &__title {
+    font-family: $font-japanese;
+    font-size: 2.2rem;
+    color: $color-wood;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+  }
+
+  &__kakemono {
+    background-color: $tatami-paja;
+    border-left: 0.2rem solid $color-wood;
+    border-right: 0.2rem solid $color-wood;
+    padding: 0.01rem 1rem;
+    margin: 2rem auto;
+    display: inline-block;
+    box-shadow: 0.3rem 0.3rem 0.6rem rgba(0, 0, 0, 0.3);
+  }
+
+  &__subtitle {
+    margin: 0;
+    font-family: $font-japanese;
+    font-size: 1rem;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    color: $text-color;
+  }
+
+  /* Contenedor de la lista */
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3.5rem 2rem;
+    list-style: none;
+    padding: 0;
+    max-width: 75rem;
+    margin: 0 auto;
+  }
+  &__item {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  /* El Marco  */
+  &__frame {
+    background-color: $color-paper;
+    border: 0.4rem solid $color-wood;
+    padding: 1.5rem;
+    width: 6rem;
+    height: 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: $base-transition;
+    position: relative;
+    box-shadow: $sombra-inner;
+
+    overflow: hidden;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -100%;
+      left: -150%; // Empieza escondido a la izquierda
+      width: 250%;
+      height: 1rem;
+      background: linear-gradient(
+        to right,
+        transparent 10%,
+        rgba(255, 255, 255, 1) 50%,
+        // Blanco puro al 100% de opacidad
+        transparent 90%
+      );
+
+      box-shadow: 0 0 0.625rem rgba(255, 255, 255, 0.8);
+
+      transform: rotate(35deg);
+      pointer-events: none;
+    }
+
+    // Estado interactivo
+    &:hover {
+      transform: translateY(0.5rem) rotate(2deg);
+      box-shadow: 0.75rem 0.75rem 1.25rem rgba(0, 0, 0, 0.15);
+      cursor: pointer;
+
+      &::after {
+        left: 100%;
+        top: 150%;
+        transition: all 0.4s ease-out;
+      }
+    }
+  }
+
+  /* Gestión de iconos */
+
+  &__icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    object-fit: contain; // Mantiene proporción
+    margin-bottom: 1rem;
+  }
+
+  &__name {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: $color-wood;
+    text-transform: uppercase;
+  }
+
+  /* --- MEDIA QUERIES (TABLET) --- */
+  @media (min-width: $breakpoint-tablet) {
+    &__content {
+      padding: 12rem 2rem 30vh 2rem;
+
+      &--katanas {
+        &::before {
+          background-position: center bottom 95%;
+          background-size: 28rem 8rem;
+        }
+      }
+    }
+
+    &__frame {
+      width: 9rem;
+      height: 11rem;
+      padding: 2rem;
+    }
+
+    &__icon {
+      width: 4.5rem;
+      height: 4.5rem;
+    }
+  }
+  /* --- MEDIA QUERIES (DESKTOP) --- */
+  @media (min-width: $breakpoint-desktop) {
+    &__content {
+      &--katanas {
+        &::before {
+          background-position: center bottom 93%;
+          background-size: 28rem 9rem;
+        }
+      }
+    }
+  }
+}

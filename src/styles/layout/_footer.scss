@@ -1,0 +1,53 @@
+/* --- FOOTER: Estructura y Estética --- */
+.footer {
+  background: linear-gradient(to bottom, #a8d5e2 0%, $color-sakura 40%);
+  padding: 2.5rem 1rem;
+  text-align: center;
+  letter-spacing: 0.06rem;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: flex-end;
+  }
+
+  &__copy {
+    color: darken($color-green, 15%);
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+
+  &__link {
+    color: darken($color-green, 15%);
+    font-size: 0.9rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $color-red;
+    }
+  }
+
+  &__social {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+}
+
+/* --- MEDIA QUERIES (DESKTOP) --- */
+@media (min-width: $breakpoint-tablet) {
+  .footer {
+    padding-top: 3rem;
+
+    &__container {
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 0 auto;
+      padding: 0 1rem;
+      max-width: 75rem;
+    }
+  }
+}

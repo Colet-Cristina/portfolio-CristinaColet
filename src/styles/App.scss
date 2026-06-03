@@ -1,0 +1,17 @@
+// --- CORE
+@import "./core/variables";
+@import "./core/animations";
+
+// Base (Estilos globales y reset)
+@import "./core/base";
+
+// --- LAYOUT
+@import "./layout/header";
+@import "./layout/footer";
+
+// --- PAGES
+@import "./pages/hero";
+@import "./pages/gardenCode";
+@import "./pages/gardenFlower";
+@import "./pages/tools";
+@import "./pages/roots";

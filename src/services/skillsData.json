@@ -1,0 +1,65 @@
+[
+  {
+    "id": "html",
+    "name": "HTML5",
+    "icon": "/html.png",
+    "category": "frontend"
+  },
+  {
+    "id": "css",
+    "name": "CSS3",
+    "icon": "/css.png",
+    "category": "frontend"
+  },
+  {
+    "id": "js",
+    "name": "JavaScript",
+    "icon": "/javaScript.png",
+    "category": "frontend"
+  },
+  {
+    "id": "react",
+    "name": "React",
+    "icon": "/react.png",
+    "category": "frontend"
+  },
+  {
+    "id": "sass",
+    "name": "SASS",
+    "icon": "/sass.png",
+    "category": "frontend"
+  },
+
+  {
+    "id": "node",
+    "name": "Node JS",
+    "icon": "node-js.png",
+    "category": "backend"
+  },
+  {
+    "id": "express",
+    "name": "Express JS",
+    "icon": "/express.png",
+    "category": "backend"
+  },
+
+  {
+    "id": "mysql",
+    "name": "MySQL",
+    "icon": "/mysql.png",
+    "category": "backend"
+  },
+
+  {
+    "id": "github",
+    "name": "GitHub",
+    "icon": "/github.png",
+    "category": "tools"
+  },
+  {
+    "id": "vscode",
+    "name": "VS Code",
+    "icon": "/vscode.png",
+    "category": "tools"
+  }
+]

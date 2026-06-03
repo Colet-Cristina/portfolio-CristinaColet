@@ -1,0 +1,150 @@
+/* ---  ANIMACIONES (Keyframes) --- */
+
+// --- ------ HEADER ------ ---
+// Simula el impacto de un sello de tinta tradicional japonés
+
+@keyframes sealStamp {
+  0% {
+    opacity: 0;
+    transform: scale(3) rotate(-20deg);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(0.9) rotate(-10deg); // Rebote al tocar el "papel"
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(-10deg);
+  }
+}
+
+// Expansión horizontal para simular el despliegue de un pergamino
+@keyframes openScroll {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* --- HERO & AMBIENTE --- */
+
+// Transición suave que de opacidad y enfoque progresivo
+@keyframes fadeInStone {
+  0% {
+    opacity: 0;
+    filter: blur(0.625rem);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+// Movimiento de tierra/agua
+@keyframes waveFlow {
+  0% {
+    background-position:
+      0% 0%,
+      0% 0%;
+  }
+  100% {
+    background-position:
+      6.25rem 0%,
+      -6.25rem 0%;
+  }
+}
+/* --- GARDEN: Dinámicas de la Naturaleza --- */
+
+// Simulación de caída pétalos
+@keyframes sakuraFall {
+  0% {
+    top: -10%;
+    transform: translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  100% {
+    top: 110%;
+    transform: translateX(6.25rem) rotate(720deg); // Caída diagonal con rotación
+    opacity: 0;
+  }
+}
+// Movimiento oscilatorio suave, plantas y tallos
+@keyframes plantSway {
+  0%,
+  100% {
+    transform: rotate(-1.5deg);
+  }
+  50% {
+    transform: rotate(1.5deg);
+  }
+}
+
+/* --- UTILIDADES GENERALES --- */
+
+// Transición básica de transparencia de 0 a 100%
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+// Entrada con subida suavemente mientras se vuelve visible
+@keyframes slideUp {
+  from {
+    transform: translateY(3.125rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+// Versión más corta y sutil de 'slideUp'
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(1.25rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+// Efecto de "florecimiento"
+@keyframes flowerPop {
+  0% {
+    opacity: 0;
+    // Empieza pequeño y un poco más abajo (donde estaría la flor)
+    transform: translate(-50%, -20%) scale(0);
+    filter: blur(0.625rem);
+  }
+  70% {
+    // Un ligero exceso para el efecto rebote
+    transform: translate(-50%, -52%) scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    filter: blur(0);
+  }
+}
+/* Animación de brillo rápido */
+@keyframes flash-frame {
+  0% {
+    filter: brightness(1) drop-shadow(0 0.5rem 0.8rem rgba(0, 0, 0, 0.2));
+  }
+  50% {
+    filter: brightness(1.4)
+      drop-shadow(0 0.5rem 1.2rem rgba(255, 255, 255, 0.4));
+  }
+  100% {
+    filter: brightness(1) drop-shadow(0 0.5rem 0.8rem rgba(0, 0, 0, 0.2));
+  }
+}

@@ -1,0 +1,277 @@
+/* --- HEADER: Estructura --- */
+.header {
+  background: $header-brown;
+  border-bottom: 0.06rem solid darken($color-red, 5%);
+  box-shadow: $shadow-soft;
+  position: relative;
+  z-index: 10;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    left: 0.9rem;
+    padding: 0 0.6rem;
+    position: relative;
+  }
+
+  // Identidad visual (Sello Hanko)
+  &__seal {
+    position: absolute;
+    left: -0.5rem;
+    height: 3rem;
+    width: auto;
+    opacity: 0;
+    animation: sealStamp 0.8s ease-out forwards;
+    animation-delay: 0.5s;
+  }
+
+  /* --- BOTÓN HAMBURGUESA (Solo Móvil) --- */
+  &__menu-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 1.8rem;
+    height: 1.2rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 200;
+
+    .header__menu-bar {
+      width: 100%;
+      height: 0.2rem;
+      background: $color-red;
+      border-radius: 0.625rem;
+      transition: all 0.3s ease-in-out;
+      transform-origin: center;
+    }
+
+    &.is-open {
+      .header__menu-bar {
+        &:nth-child(1) {
+          transform: translateY(0.5rem) rotate(45deg);
+        }
+        &:nth-child(2) {
+          opacity: 0;
+          transform: translateX(1rem);
+        }
+        &:nth-child(3) {
+          transform: translateY(-0.5rem) rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  /* --- NAVEGACIÓN (Desplegable) --- */
+  &__nav {
+    position: absolute;
+    top: 3.5rem;
+    right: -1.5rem;
+
+    background: $background-color;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    border: 0.3rem solid $color-red;
+    border-top: 0.125rem solid $color-red;
+    border-bottom: 0.125rem solid $color-red;
+
+    transition: transform 0.4s ease-in-out;
+    transform: translateX(130%); // Escondido a la derecha
+    box-shadow: -0.3125rem 0 0.9375rem rgba(0, 0, 0, 0.2);
+
+    &.is-active {
+      transform: translateX(-23%);
+    }
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  &__item {
+    list-style: none;
+    display: block;
+  }
+
+  &__nav-item {
+    text-decoration: none;
+    color: $color-red;
+    font-family: $font-japanese;
+    padding: 0.875rem 2rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+
+    transition: all 0.3s ease;
+
+    &:active {
+      // Efecto sello al tocar en móvil
+      background-color: $color-red;
+      color: white;
+      border-radius: 0.3rem;
+    }
+  }
+
+  /* --- TÍTULO (PERGAMINO) --- */
+  &__title {
+    margin: 0;
+    flex-grow: 0.5;
+    display: flex;
+    justify-content: center;
+
+    &-link {
+      display: inline-flex;
+      justify-content: flex-start;
+      text-decoration: none;
+
+      .scroll__roller {
+        width: 0.8rem;
+        height: 3rem;
+        background: $color-red;
+        border: 0.0938rem solid $color-red;
+        flex-shrink: 0;
+        border-radius: 0.2rem;
+
+        &--left {
+          width: 0.3rem;
+        }
+      }
+
+      .scroll__content {
+        background-color: $background-color;
+
+        overflow: hidden;
+        white-space: nowrap;
+        width: 0;
+        display: block;
+
+        animation: openScroll 1s cubic-bezier(0.45, 0.05, 0.55, 0.95) forwards;
+        animation-delay: 1.3s;
+        border-top: 0.125rem solid $color-red;
+        border-bottom: 0.125rem solid $color-red;
+        box-shadow:
+          inset 1rem 0 1rem -0.5rem rgba(0, 0, 0, 0.2),
+          inset -1rem 0 1rem -0.5rem rgba(0, 0, 0, 0.2);
+      }
+
+      .scroll__text {
+        font-family: $font-japanese;
+        font-size: 1.3rem;
+        white-space: nowrap;
+        color: $color-red;
+        font-weight: bold;
+        padding: 0 0.5rem;
+        opacity: 0;
+        animation: fadeIn 0.5s forwards;
+        animation-delay: 2s;
+        text-shadow: 0.0625rem 0.0625rem 0 rgba(61, 60, 60, 0.3);
+      }
+    }
+  }
+
+  /* --- MEDIA QUERIES (TABLET) --- */
+  @media (min-width: $breakpoint-tablet) {
+    .header {
+      height: 7rem;
+
+      &__container {
+        padding: 0 4rem;
+        flex-direction: row;
+      }
+
+      &__seal {
+        position: absolute;
+        left: 4rem;
+      }
+
+      &__menu-btn {
+        display: none;
+      }
+
+      &__nav {
+        position: absolute;
+        right: -1rem;
+        margin: 0;
+        height: auto;
+        width: auto;
+        background: transparent;
+        transform: translateX(0);
+        box-shadow: none;
+        border: none;
+        display: flex;
+      }
+
+      &__list {
+        display: flex;
+        gap: 0.2rem;
+        margin: 0;
+        padding: 0;
+      }
+
+      &__nav-item {
+        font-weight: 500;
+        letter-spacing: 0.05rem;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        font-weight: bold;
+        border: 0.0625rem solid transparent;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover {
+          background-color: $color-red;
+          color: $background-color;
+          box-shadow: inset 0 0 0.5rem rgba(0, 0, 0, 0.1);
+        }
+
+        // &.is-active {
+        //   border: 0.0625rem solid $color-red;
+        //   color: $color-red;
+        // }
+      }
+
+      &__title {
+        justify-content: center;
+      }
+
+      &__title-link {
+        .scroll__roller {
+          width: 1.2rem;
+          height: 4.5rem;
+
+          &--left {
+            width: 0.5rem;
+          }
+        }
+
+        .scroll__text {
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+}
+
+/* --- MEDIA QUERIES (DESKTOP) --- */
+@media (min-width: $breakpoint-desktop) {
+  .header {
+    &__list {
+      display: flex;
+      flex-direction: row;
+
+      margin: 0;
+    }
+  }
+}

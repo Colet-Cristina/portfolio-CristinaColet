@@ -1,0 +1,52 @@
+/* VARIABLES GLOBALES (CONFIGURACIÓN)*/
+
+/* --- BREAKPOINTS (Diseño Responsivo) --- */
+$breakpoint-tablet: 48rem; // 768px
+$breakpoint-desktop: 75rem; // 1200px
+
+/* --- PALETA DE COLORES --- */
+
+/* --- colores temáticos --- */
+$background-color: #f3d4a6;
+$header-brown: #eebb6e;
+$color-water: #a8d5e2;
+$color-green: #196933;
+$color-darkGreen: #1b4e1b;
+$color-red: #c0392b;
+$color-sakura: #fec5e5;
+$color-stone: grey;
+$color-pared: #f8e2c1;
+
+$tatami-paja: #d8c28f;
+$tatami-borde: #222222;
+
+/* --- TIPOGRAFÍA --- */
+$text-color: #333333;
+$text-modal-btn: #cc1845;
+$font-japanese: "Yuji Syuku", serif;
+$font-body: "Lora", serif;
+
+/* --- ESTÉTICA DE PIEDRA --- */
+$stone-gradient: radial-gradient(circle at 30% 30%, #a8a8a8, #696969);
+$stone-border: 0.1rem solid rgba(0, 0, 0, 0.1);
+
+/* --- ESTETICA CUADROS --- */
+
+$color-wood: #663716;
+$color-paper: #f7eecc;
+$base-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+/* --- SOMBRAS --- */
+// Neutras
+$shadow-soft: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1);
+$shadow-strong: 0 0.625rem 0.9375rem rgba(0, 0, 0, 0.4);
+$sombra-inner: inset 0 0.625rem 1.25rem rgba(0, 0, 0, 0.2);
+// piedras
+$shadow-stone:
+  inset -0.25rem -0.25rem 0.5rem rgba(0, 0, 0, 0.4),
+  0.25rem 0.5rem 0.9375rem rgba(0, 0, 0, 0.3);
+
+// Temáticas
+$shadow-green: 0.625rem 0.625rem 1.25rem rgba(45, 90, 39, 0.5);
+$shadow-sakura: 0 0.25rem 0.75rem rgba(254, 197, 229, 0.4);
+$shadow-red-hover: 0.625rem 0.625rem 1.25rem rgba(192, 57, 43, 0.5);
