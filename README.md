@@ -69,6 +69,28 @@ _Selección de proyectos cultivados con mimo y código limpio._
 
 ---
 
+## 📦 Instalación y Arranque Local
+
+Si quieres ejecutar este proyecto en tu máquina local, sigue estos pasos:
+
+Clona el repositorio:
+
+```bash
+git clone [https://github.com/Colet-Cristina/portfolio-CristinaColet.git]
+```
+
+Instala las dependencias del proyecto:
+
+```bash
+npm install
+```
+
+Arranca el servidor de desarrollo (Vite):
+
+```bash
+npm run dev
+```
+
 ## 👩🏻‍💻 Sobre mí
 
 Mi camino hacia el desarrollo web no ha sido una línea recta, pero cada etapa me ha dado una herramienta que hoy aplico al terminal.
