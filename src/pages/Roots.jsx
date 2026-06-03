@@ -10,20 +10,20 @@ function Roots() {
       </div>
 
       <div className="roots__story">
-        <p className="roots__text">
+        <p className="roots__text roots__text--right">
           Mi trayectoria profesional ha pasado por entornos muy distintos, pero
           todos me han dejado una lección importante. Aprendí a moverme en
           ritmos altos y a ser resolutiva, adaptándome a las necesidades del
           momento.
         </p>
 
-        <p className="roots__text">
+        <p className="roots__text roots__text--left">
           También que las cosas bien hechas llevan su tiempo; que para que algo
           crezca hace falta paciencia, una base sólida y mucha atención al
           detalle.
         </p>
 
-        <p className="roots__text roots__text--highlight">
+        <p className="roots__text roots__text--center">
           Inspirada en la calma de un jardín Zen, me esfuerzo por escribir
           código limpio y ordenado, basándome en la disciplina y el aprendizaje,
           un camino que inicié en Adalab y que sigo recorriendo cada día.
