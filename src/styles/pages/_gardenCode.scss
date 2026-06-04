@@ -1,7 +1,7 @@
 /* --- GARDEN: Contenedor principal con estética Zen y caída de pétalos --- */
 
 .garden {
-  padding: 8rem 0;
+  padding: 7.5rem 0 2rem 0;
   position: relative;
   overflow: hidden;
 
@@ -11,8 +11,9 @@
   // Background: Representación visual del ciclo natural
   background: linear-gradient(
     to bottom,
-    #ffb3ba 0%,
-    #ffdfba 30%,
+    transparent 0%,
+    #ffb3ba 15%,
+    #ffdfba 40%,
     #e2f0cb 50%,
     #8fb9a8 70%,
     #a8d5e2 100%
@@ -177,7 +178,7 @@
 .sakura_branch {
   background-image: url("/rama.png");
   position: absolute;
-  top: 1rem;
+  top: 0.2rem;
   width: 25rem;
   height: 15.6rem;
   background-size: contain;
@@ -190,7 +191,7 @@
 
 .sakura_branch-left {
   left: -1rem;
-  transform: rotate(10deg);
+  transform: rotate(20deg);
 }
 .sakura_branch-right {
   /* Por defecto en móvil: oculta */
