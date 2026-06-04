@@ -31,14 +31,14 @@ function App() {
           <Hero />
         </section>
 
-        {/* Sección Raíces: Información biográfica  */}
-        <section id="roots" className="section-roots">
-          <Roots />
-        </section>
-
         {/* Sección Jardín de Código: Listado de proyectos dinámicos*/}
         <section id="garden-code" className="section-garden">
           <GardenCode />
+        </section>
+
+        {/* Sección Raíces: Información biográfica  */}
+        <section id="roots" className="section-roots">
+          <Roots />
         </section>
 
         {/* Sección Herramientas: Stack tecnológico */}

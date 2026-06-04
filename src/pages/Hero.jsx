@@ -59,17 +59,7 @@ function Hero() {
         {/* Navegación principal: Enlaces internos */}
         <nav className="hero__nav">
           <ul className="hero__list">
-            {/* --- PIEDRA 1: RAÍCES --- */}
-            <li className="hero__item">
-              <a
-                href="#roots"
-                className="hero__link hero__link--roots"
-                aria-label="Sobre mí: mis raíces"
-              >
-                Raíces
-              </a>
-            </li>
-
+            {/* --- PIEDRA 1: JARDÍN --- */}
             <li className="hero__item">
               <a
                 href="#garden-code"
@@ -80,6 +70,18 @@ function Hero() {
               </a>
             </li>
 
+            {/* --- PIEDRA 2: RAÍCES --- */}
+            <li className="hero__item">
+              <a
+                href="#roots"
+                className="hero__link hero__link--roots"
+                aria-label="Sobre mí: mis raíces"
+              >
+                Raíces
+              </a>
+            </li>
+
+            {/* --- PIEDRA 3: HERRAMIENTAS --- */}
             <li className="hero__item">
               <a
                 href="#tools"
