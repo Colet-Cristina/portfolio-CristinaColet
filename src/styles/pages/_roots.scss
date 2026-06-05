@@ -1,10 +1,11 @@
 .roots {
   position: relative;
-  min-height: 100vh;
+  min-height: auto;
   height: auto;
   overflow: hidden;
 
   padding: 0 1.5rem;
+  padding-bottom: 9rem;
   display: flex;
   flex-direction: column;
   font-family: $font-body;
@@ -90,7 +91,7 @@
     font-weight: bolder;
     max-width: 65%;
     line-height: 1.6;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     opacity: 0;
     animation: fadeInUp 1s ease forwards;
 
@@ -99,23 +100,22 @@
       align-self: flex-end;
       text-align: right;
       animation-delay: 0.8s;
-      padding-bottom: 3rem;
+      padding-bottom: 2rem;
     }
 
     &--left {
-      align-self: flex-start;
-      text-align: left;
+      align-self: flex-end;
+      text-align: right;
       animation-delay: 1s;
-      padding-bottom: 3rem;
+      padding-bottom: 1rem;
     }
 
     &--center {
-      align-self: center;
-      text-align: center;
+      align-self: flex-start;
+      text-align: left;
       max-width: 90%;
       color: $tatami-borde;
       font-weight: 700;
-      margin-top: 3rem;
       animation-delay: 1.6s;
     }
   }

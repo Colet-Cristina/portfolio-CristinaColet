@@ -3,7 +3,7 @@
 /* --- Tools --- */
 .tools {
   background-color: $color-pared;
-  min-height: 100vh;
+  min-height: auto;
   height: auto;
   position: relative;
   display: flex;
@@ -31,20 +31,30 @@
       background-color: $color-wood;
       box-shadow: $shadow-strong;
       z-index: 11;
+      background-image: 
+   
+        // 2. Sombreado inclinado para dar volumen estriado y nudos
+        linear-gradient(
+        105deg,
+        rgba(0, 0, 0, 0.15) 15%,
+        transparent 35%,
+        rgba(255, 255, 255, 0.08) 50%,
+        transparent 55%,
+        rgba(0, 0, 0, 0.2) 75%,
+        transparent 90%
+      );
     }
   }
 
   /* Revestimiento de madera */
   &__wall {
-    position: absolute;
-    bottom: 8.5vh;
-    left: 0;
+    position: relative;
     width: 100%;
-    height: 15%;
+    height: 7rem;
     background-color: $color-wood;
 
-    border-top: 1rem solid darken($color-wood, 5%);
-    border-bottom: 1rem solid darken($color-wood, 5%);
+    border-top: 1rem solid darken($color-wood, 7%);
+    border-bottom: 1rem solid darken($color-wood, 8%);
 
     background-image: 
       // Líneas de los bordes negros
@@ -65,50 +75,18 @@
         );
   }
 
-  /* Suelo  */
-  &__floor {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 10vh;
-    background-color: $tatami-paja;
-    z-index: 8;
-
-    background-image:
-      linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, transparent 40%),
-      // Líneas de los bordes negros
-      repeating-linear-gradient(
-          to right,
-          $tatami-borde,
-          $tatami-borde 0.4rem,
-          transparent 0.4rem,
-          transparent 12rem
-        ),
-      // Efecto de textura de paja
-      repeating-linear-gradient(
-          to bottom,
-          rgba(0, 0, 0, 0.08) 0,
-          rgba(0, 0, 0, 0.05) 0.1875rem,
-          transparent 0.125rem,
-          transparent 0.375rem
-        );
-    transform: perspective(6.25rem) rotateX(7deg) scaleX(1.3);
-    transform-origin: bottom;
-    box-shadow: $sombra-inner;
-  }
-
   &__content {
     position: relative;
-    z-index: 15; // Por encima de la arquitectura
+    z-index: 15;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10rem 1rem 20vh 1rem;
+    padding: 8rem 1rem 2rem 1rem;
 
     /* --- Katanas Decorativas --- */
     &--katanas {
-      position: relative; // Asegura que el pseudoelemento se posicione respecto a esto
+      position: relative;
 
       &::before {
         content: "";
@@ -117,12 +95,12 @@
         left: 0;
         width: 100%;
         height: 100%;
-        z-index: -1; // Se queda detrás del contenido
+        z-index: -1;
 
         background-image: url("/katanas.png");
         background-repeat: no-repeat;
-        background-position: center bottom 93%;
-        background-size: 20rem 5rem;
+        background-position: center bottom 91%;
+        background-size: 16rem 4rem;
 
         opacity: 0.9;
         filter: drop-shadow(0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.7));
@@ -132,7 +110,7 @@
 
   &__title {
     font-family: $font-japanese;
-    font-size: 2.2rem;
+    font-size: 2rem;
     color: $color-wood;
     margin-bottom: 0;
     text-transform: uppercase;
@@ -144,7 +122,7 @@
     border-left: 0.2rem solid $color-wood;
     border-right: 0.2rem solid $color-wood;
     padding: 0.01rem 1rem;
-    margin: 2rem auto;
+    margin: 1.5rem auto;
     display: inline-block;
     box-shadow: 0.3rem 0.3rem 0.6rem rgba(0, 0, 0, 0.3);
   }
@@ -163,7 +141,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 3.5rem 2rem;
+    gap: 1.5rem 1rem;
     list-style: none;
     padding: 0;
     max-width: 75rem;
@@ -177,10 +155,10 @@
   /* El Marco  */
   &__frame {
     background-color: $color-paper;
-    border: 0.4rem solid $color-wood;
-    padding: 1.5rem;
-    width: 6rem;
-    height: 8rem;
+    border: 0.3rem solid $color-wood;
+    padding: 0.8rem 0.4rem;
+    width: 5rem;
+    height: 6rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -195,7 +173,7 @@
       content: "";
       position: absolute;
       top: -100%;
-      left: -150%; // Empieza escondido a la izquierda
+      left: -150%;
       width: 250%;
       height: 1rem;
       background: linear-gradient(
@@ -229,23 +207,24 @@
   /* Gestión de iconos */
 
   &__icon {
-    width: 3.5rem;
-    height: 3.5rem;
-    object-fit: contain; // Mantiene proporción
-    margin-bottom: 1rem;
+    width: 2.8rem;
+    height: 2.8rem;
+    object-fit: contain;
+    margin-bottom: 0.3rem;
   }
 
   &__name {
-    font-size: 0.85rem;
+    font-size: 0.7rem;
     font-weight: 700;
     color: $color-wood;
     text-transform: uppercase;
+    line-height: 1;
   }
 
   /* --- MEDIA QUERIES (TABLET) --- */
   @media (min-width: $breakpoint-tablet) {
     &__content {
-      padding: 12rem 2rem 30vh 2rem;
+      padding: 10rem 2rem 4rem 2rem;
 
       &--katanas {
         &::before {

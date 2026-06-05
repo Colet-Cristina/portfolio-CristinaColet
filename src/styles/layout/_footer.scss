@@ -1,9 +1,26 @@
 /* --- FOOTER: Estructura y Estética --- */
 .footer {
-  background: linear-gradient(to bottom, #a8d5e2 0%, $color-sakura 40%);
-  padding: 2.5rem 1rem;
+  background-color: $tatami-paja;
+  // position: relative;
+  z-index: 8;
+  padding: 3rem 1rem;
   text-align: center;
   letter-spacing: 0.06rem;
+
+  background-image:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, transparent 40%),
+    // Efecto de textura de paja
+    repeating-linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.08) 0,
+        rgba(0, 0, 0, 0.05) 0.1875rem,
+        transparent 0.125rem,
+        transparent 0.375rem
+      );
+
+  transform: perspective(20rem) rotateX(8deg) scaleX(1.15);
+  transform-origin: top center;
+  box-shadow: $sombra-inner;
 
   &__container {
     display: flex;
