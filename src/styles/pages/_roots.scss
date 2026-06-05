@@ -5,7 +5,7 @@
   overflow: hidden;
 
   padding: 0 1.5rem;
-  padding-bottom: 9rem;
+  padding-bottom: 2rem;
   display: flex;
   flex-direction: column;
   font-family: $font-body;
@@ -27,33 +27,6 @@
     background: linear-gradient(to bottom, #a8d5e2 0%, transparent 100%);
     z-index: 1;
     pointer-events: none;
-  }
-
-  /* CONTENEDOR DE CAPAS */
-  &__layers {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none; // Para que no te impida hacer scroll o click
-  }
-
-  &__layer {
-    position: absolute;
-
-    &--torii {
-      top: 8rem;
-      width: 15rem;
-    }
-
-    &--bridge {
-      top: 33rem;
-      right: 1rem;
-      left: auto;
-      width: 15rem;
-      transform: translateY(-50%);
-    }
   }
 
   /*  TÍTULO  */
@@ -84,14 +57,14 @@
   &__story {
     display: flex;
     flex-direction: column;
-    margin-top: 1rem;
+    margin-top: 1.9rem;
   }
 
   &__text {
     font-weight: bolder;
     max-width: 65%;
     line-height: 1.6;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.7rem;
     opacity: 0;
     animation: fadeInUp 1s ease forwards;
 
@@ -104,18 +77,17 @@
     }
 
     &--left {
-      align-self: flex-end;
-      text-align: right;
+      text-align: left;
       animation-delay: 1s;
       padding-bottom: 1rem;
     }
 
     &--center {
-      align-self: flex-start;
-      text-align: left;
-      max-width: 90%;
-      color: $tatami-borde;
+      align-self: center;
+      text-align: center;
+      max-width: 22rem;
       font-weight: 700;
+      margin-top: 4.5rem;
       animation-delay: 1.6s;
     }
   }

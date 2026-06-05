@@ -24,9 +24,10 @@ function Roots() {
         </p>
 
         <p className="roots__text roots__text--center">
-          Inspirada en la calma de un jardín Zen, me esfuerzo por escribir
-          código limpio y ordenado, basándome en la disciplina y el aprendizaje,
-          un camino que inicié en Adalab y que sigo recorriendo cada día.
+          Busco cultivar un código limpio y ordenado, inspirada en la cultura
+          japonesa por el cuidado minucioso de los detalles, la paciencia y la
+          búsqueda del equilibrio; un camino que nació en Adalab y que sigo
+          recorriendo cada día.
         </p>
       </div>
     </section>
