@@ -4,6 +4,11 @@ import { useState, useEffect } from "react";
 import GardenFlower from "../components/GardenFlower";
 import projectsData from "../services/projectsData.json";
 
+// Resuelve rutas dinámicas en 'src/' para que no se rompan tras el empaquetado (Build) en GitHub Pages.
+const getProjectImg = (name) => {
+  return new URL(`../images/projects/${name}`, import.meta.url).href;
+};
+
 function GardenCode() {
   // Estados
   const [selectedProject, setSelectedProject] = useState(null);
@@ -128,7 +133,7 @@ function GardenCode() {
 
             <div className="modal-body">
               <img
-                src={selectedProject.image}
+                src={getProjectImg(selectedProject.image)}
                 alt={`Captura de ${selectedProject.title}`}
                 className="modal-img"
               />

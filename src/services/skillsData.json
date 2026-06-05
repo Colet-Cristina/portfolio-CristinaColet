@@ -2,31 +2,31 @@
   {
     "id": "html",
     "name": "HTML5",
-    "icon": "/html.png",
+    "icon": "html.png",
     "category": "frontend"
   },
   {
     "id": "css",
     "name": "CSS3",
-    "icon": "/css.png",
+    "icon": "css.png",
     "category": "frontend"
   },
   {
     "id": "js",
     "name": "JavaScript",
-    "icon": "/javaScript.png",
+    "icon": "javaScript.png",
     "category": "frontend"
   },
   {
     "id": "react",
     "name": "React",
-    "icon": "/react.png",
+    "icon": "react.png",
     "category": "frontend"
   },
   {
     "id": "sass",
     "name": "SASS",
-    "icon": "/sass.png",
+    "icon": "sass.png",
     "category": "frontend"
   },
 
@@ -39,27 +39,27 @@
   {
     "id": "express",
     "name": "Express JS",
-    "icon": "/express.png",
+    "icon": "express.png",
     "category": "backend"
   },
 
   {
     "id": "mysql",
     "name": "MySQL",
-    "icon": "/mysql.png",
+    "icon": "mysql.png",
     "category": "backend"
   },
 
   {
     "id": "github",
     "name": "GitHub",
-    "icon": "/github.png",
+    "icon": "github.png",
     "category": "tools"
   },
   {
     "id": "vscode",
     "name": "VS Code",
-    "icon": "/vscode.png",
+    "icon": "vscode.png",
     "category": "tools"
   }
 ]

@@ -1,6 +1,11 @@
 /* Componente Tools */
 import skillsData from "../services/skillsData.json";
 
+// Resuelve rutas dinámicas en 'src/' para que no se rompan tras el empaquetado (Build) en GitHub Pages.
+const getSkillImg = (name) => {
+  return new URL(`../images/skills/${name}`, import.meta.url).href;
+};
+
 function Tools() {
   return (
     <section id="tools" className="tools">
@@ -28,7 +33,7 @@ function Tools() {
                 >
                   <div className="tools__frame">
                     <img
-                      src={skill.icon}
+                      src={getSkillImg(skill.icon)}
                       alt={skill.name}
                       className="tools__icon"
                     />
@@ -54,7 +59,7 @@ function Tools() {
               >
                 <div className="tools__frame">
                   <img
-                    src={skill.icon}
+                    src={getSkillImg(skill.icon)}
                     alt={skill.name}
                     className="tools__icon"
                   />
@@ -79,7 +84,7 @@ function Tools() {
               >
                 <div className="tools__frame">
                   <img
-                    src={skill.icon}
+                    src={getSkillImg(skill.icon)}
                     alt={skill.name}
                     className="tools__icon"
                   />

@@ -6,7 +6,7 @@
     "tech": ["HTML5", "CSS3", "JavaScript"],
     "link": "https://github.com/colet-cristina/fauna-cards-platzi-js",
     "demo": " https://colet-cristina.github.io/fauna-cards-platzi-js/",
-    "image": "/fauna.jpg"
+    "image": "fauna.jpg"
   },
   {
     "id": 2,
@@ -15,7 +15,7 @@
     "tech": ["React", "React Router", "SASS", "API"],
     "link": "https://github.com/Colet-Cristina/modulo-3-evaluacion-final-Colet-Cristina",
     "demo": "https://colet-cristina.github.io/modulo-3-evaluacion-final-Colet-Cristina/",
-    "image": "/harry.jpg"
+    "image": "harry.jpg"
   },
   {
     "id": 3,
@@ -24,6 +24,6 @@
     "tech": ["HTML5", "CSS3", "JavaScript"],
     "link": "https://github.com/Colet-Cristina/modulo-2-evaluacion-intermedia-Colet-Cristina",
     "demo": "",
-    "image": "/juego.png"
+    "image": "juego.png"
   }
 ]
