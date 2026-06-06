@@ -1,18 +1,30 @@
 /* Componente Tools */
+import { useState } from "react";
 import skillsData from "../services/skillsData.json";
+import certificatesData from "../services/certificatesData.json";
 
 // Resuelve rutas dinámicas en 'src/' para que no se rompan tras el empaquetado (Build) en GitHub Pages.
 const getSkillImg = (name) => {
   return new URL(`../images/skills/${name}`, import.meta.url).href;
 };
 
+const getCertImg = (name) => {
+  return new URL(`../images/certificates/${name}`, import.meta.url).href;
+};
+
 function Tools() {
+  // Estado para mostrar/ocultar los certificados
+  const [showCertificates, setShowCertificates] = useState(false);
+
+  const toggleCertificates = () => {
+    setShowCertificates(!showCertificates);
+  };
+
   return (
     <section id="tools" className="tools">
       {/* --- ELEMENTOS DE FONDO --- */}
       <div className="tools__ceiling"></div>
       <div className="dojo__side-structure"></div>
-
       {/* --- CONTENIDO PRINCIPAL --- */}
       <div className="tools__content tools__content--katanas">
         <h2 className="tools__title">Herramientas</h2>
@@ -93,11 +105,52 @@ function Tools() {
               </li>
             ))}
         </ul>
+
+        {/* SECCIÓN CERTIFICADOS */}
+        <button
+          className="tools__kakemono tools__kakemono--btn"
+          onClick={toggleCertificates}
+        >
+          <h3 className="tools__subtitle">
+            {showCertificates ? "Ocultar 🞪" : "Ver Certificados ❯"}
+          </h3>
+        </button>
+
+        {/* MODAL */}
+        {showCertificates &&
+          certificatesData &&
+          certificatesData.length > 0 && (
+            <div className="tools__modal-overlay">
+              <div className="tools__modal-container">
+                <ul className="tools__scroll-carousel">
+                  {certificatesData.map((cert) => {
+                    const fullImgPath = getCertImg(cert.image);
+
+                    return (
+                      <li key={cert.id} className="tools__scroll-card">
+                        <div className="tools__scroll-img-wrapper">
+                          <img
+                            src={fullImgPath}
+                            alt={`Certificado ${cert.title}`}
+                            className="tools__scroll-img"
+                          />
+                        </div>
+                        <div className="tools__scroll-info">
+                          <strong className="tools__scroll-title">
+                            {cert.title}
+                          </strong>
+                        </div>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            </div>
+          )}
       </div>
 
-      {/* --- SUELO --- */}
+      {/* --- PARED --- */}
       <div className="tools__wall"></div>
-      <div className="tools__floor"></div>
     </section>
   );
 }

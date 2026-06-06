@@ -1,0 +1,37 @@
+[
+  {
+    "id": "adalab",
+    "title": "Bootcamp de Programación Web (610 horas)",
+    "image": "adalab.jpg"
+  },
+  {
+    "id": "animaciones-css-1",
+    "title": "Animaciones con CSS",
+    "image": "animaciones-CSS-1.jpg"
+  },
+  {
+    "id": "animaciones-css-2",
+    "title": "Curso de Animaciones con CSS",
+    "image": "animaciones-CSS-2.jpg"
+  },
+  {
+    "id": "git-github",
+    "title": "Git y GitHub",
+    "image": "git-github.jpg"
+  },
+  {
+    "id": "html",
+    "title": "HTML",
+    "image": "html.jpg"
+  },
+  {
+    "id": "javascript",
+    "title": "Fundamentos de JavaScript",
+    "image": "javascript.jpg"
+  },
+  {
+    "id": "transfor-transi-css",
+    "title": "Transformaciones y Transiciones en CSS",
+    "image": "transfor-transi-css.jpg"
+  }
+]

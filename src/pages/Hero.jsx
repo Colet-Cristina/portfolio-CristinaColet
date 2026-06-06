@@ -62,7 +62,7 @@ function Hero() {
           </nav>
 
           <h3 className="hero__greeting">
-            Fullstack Developer | Mi dojo de código
+            Fullstack Developer | Mi dojo digital
           </h3>
 
           {/* Filosofía de desarrollo */}

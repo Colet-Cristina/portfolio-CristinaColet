@@ -97,7 +97,7 @@
         height: 100%;
         z-index: -1;
 
-        background-image: url("/katanas.png");
+        background-image: url("/src/images/design/katanas.png");
         background-repeat: no-repeat;
         background-position: center bottom 91%;
         background-size: 16rem 4rem;
@@ -219,6 +219,101 @@
     color: $color-wood;
     text-transform: uppercase;
     line-height: 1;
+  }
+
+  /* --- CARRUSEL --- */
+
+  &__kakemono--btn {
+    border-left: 0.2rem solid $color-wood;
+    border-right: 0.2rem solid $color-wood;
+    position: relative;
+    cursor: pointer;
+  }
+
+  // Capa oscura translúcida de fondo que cubre toda la pantalla
+  &__modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    padding: 1rem;
+
+    animation: fadeIn 0.3s ease-out both;
+  }
+
+  &__modal-container {
+    position: absolute;
+    top: 98%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 0.4rem;
+    max-width: 25rem;
+    padding: 1.2rem 1rem;
+    box-shadow: $shadow-strong;
+    z-index: 100;
+
+    animation: fadeInUp 0.3s ease-out both;
+  }
+
+  &__scroll-carousel {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    list-style: none;
+    padding: 0.5rem 0 1rem 0;
+    margin: 0;
+
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__scroll-card {
+    flex: 0 0 20rem;
+    background-color: $color-paper;
+    border: 0.2rem solid $color-wood;
+    border-radius: 0.2rem;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: $sombra-inner;
+  }
+
+  // La imagen del certificado ajustada
+  &__scroll-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  // Contenedor del texto inferior
+  &__scroll-info {
+    text-align: center;
+    width: 100%;
+  }
+
+  // Título
+  &__scroll-title {
+    font-size: 0.7rem;
+    color: $color-wood;
+    font-weight: 700;
+    line-height: 1.2;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
   /* --- MEDIA QUERIES (TABLET) --- */
