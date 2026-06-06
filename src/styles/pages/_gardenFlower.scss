@@ -1,6 +1,6 @@
 /* --- GARDEN FLOWER: Animación y Estados --- */
 
-.flower-container {
+.flower {
   width: 12rem;
   height: 12rem;
   margin: 0 auto;
@@ -11,14 +11,14 @@
   // Animación ambiental: Simula el balanceo por el viento
   animation: plantSway 6s ease-in-out infinite;
 
-  .is-center & {
+  &.flower--active {
     animation: plantSway 6s ease-in-out infinite;
     transform-origin: bottom center;
     transform: scale(1.1);
   }
   /* --- ESTRUCTURA FLOR --- */
   // Tallo
-  .flower-stem {
+  &__stem {
     position: absolute;
     top: 5.5rem;
     width: 0.4rem;
@@ -29,7 +29,7 @@
   }
 
   // Hojas
-  .flower-leaf {
+  &__leaf {
     position: absolute;
     top: 8.5rem;
     width: 1.5rem;
@@ -38,13 +38,13 @@
     z-index: 1;
     transition: all 1s ease;
 
-    &.leaf-left {
+    &--left {
       left: 35%;
       border-radius: 1rem 0 1rem 0;
       transform: rotate(60deg);
     }
 
-    &.leaf-right {
+    &--right {
       right: 35%;
       border-radius: 0 1rem 0 1rem;
       transform: rotate(-60deg);
@@ -52,37 +52,35 @@
   }
 
   /* --- ANATOMÍA DEL SVG --- */
-  .lotus-flower {
+  &__svg {
     position: relative;
     z-index: 2;
     overflow: visible;
     width: 100%;
     filter: drop-shadow(0 0.625rem 0.9375rem rgba(0, 0, 0, 0.15));
+  }
 
-    // Colores flor cerrada
-    .petal-l,
-    .petal-r,
-    .petal-center {
-      transition:
-        fill 1.2s ease,
-        transform 1.5s ease,
-        stroke 1s ease;
-    }
+  // Colores flor cerrada
+  &__petal {
+    // Todos los pétalos comparten estas transiciones base
+    transition:
+      fill 1.2s ease,
+      transform 1.5s ease,
+      stroke 1s ease;
 
-    // Los pétalos vuelven a su posición 0 (posición de apertura del SVG)
-    .petal-l,
-    .petal-r {
+    &--left,
+    &--right {
       fill: #f0879f;
-      transform-origin: 50% 80%;
+      transform-origin: 50% 80%; // Mantiene el punto de anclaje de Matt
     }
 
-    .petal-center {
+    &--center {
       fill: #f2a2b1;
     }
   }
 
   /* --- ESTADO: FLOR ABIERTA (ACTIVA) --- */
-  &.is-active {
+  &.flower--active {
     #l1,
     #r1 {
       fill: #fae3e9;
@@ -100,8 +98,8 @@
       stroke: #f2a2b1;
     }
 
-    .petal-l,
-    .petal-r {
+    .flower__petal--left,
+    .flower__petal--right {
       transform: rotate(0deg);
     }
 
@@ -111,7 +109,7 @@
   }
 
   // Ángulos de cierre
-  &:not(.is-active) {
+  &:not(.flower--active) {
     #l1 {
       transform: rotate(11deg);
     }

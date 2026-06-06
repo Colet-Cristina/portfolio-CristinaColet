@@ -108,8 +108,8 @@
   &__content {
     margin-bottom: 2rem;
     opacity: 0;
-    animation: fadeIn 0.8s ease-out forwards;
-    animation-delay: 0.2s;
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: 1s;
   }
 
   &__greeting,
@@ -130,7 +130,7 @@
     margin-bottom: 1rem;
   }
 
-  // Redes sociales con entrada escalonada
+  // Redes sociales
   &__social {
     display: flex;
     justify-content: center;
@@ -214,23 +214,23 @@
     &--garden {
       width: 7.5rem;
       height: 4.5rem;
-      animation-delay: 1.4s;
+      animation-delay: 1s;
 
       rotate: 2deg;
     }
 
     &--roots {
-      animation-delay: 1.3s;
       rotate: -3deg;
       width: 5rem;
       height: 4rem;
       margin-top: 3rem;
+      animation-delay: 1.3s;
     }
 
     &--tools {
       width: 7.5rem;
       height: 4.5rem;
-      animation-delay: 1.5s;
+      animation-delay: 1.6s;
       rotate: -1deg;
     }
 

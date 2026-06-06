@@ -13,13 +13,19 @@ function Hero() {
           <h1 className="hero__name">Cristina Colet</h1>
 
           {/* Navegación social: Enlaces externos y contacto directo */}
-          <nav className="hero__social">
+          <nav className="hero__social" aria-label="Redes sociales y contacto">
             {/* Contacto, Email */}
             <a
               href="mailto:coletcristina@gmail.com"
               className="hero__social-item"
+              aria-label="Enviar un correo electrónico"
             >
-              <img src={emailIcon} alt="Email" className="hero__social-icon" />
+              <img
+                src={emailIcon}
+                alt="Email"
+                className="hero__social-icon"
+                aria-hidden="true"
+              />
             </a>
 
             {/* Acceso a GitHub */}
@@ -28,18 +34,30 @@ function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               className="hero__social-item"
+              aria-label="Visitar el perfil de GitHub (se abre en una nueva pestaña)"
             >
-              <img src={gitIcon} alt="GitHub" className="hero__social-icon" />
+              <img
+                src={gitIcon}
+                alt="GitHub"
+                className="hero__social-icon"
+                aria-hidden="true"
+              />
             </a>
 
-            {/* Acceso a LinkedIn */}
+            {/* Acceso a Linkedin */}
             <a
               href="https://linkedin.com/in/cristina-colet-corredera/"
               target="_blank"
               rel="noopener noreferrer"
               className="hero__social-item"
+              aria-label="Visitar el perfil de Linkedin (se abre en una nueva pestaña)"
             >
-              <img src={inIcon} alt="LinkedIn" className="hero__social-icon" />
+              <img
+                src={inIcon}
+                alt="LinkedIn"
+                className="hero__social-icon"
+                aria-hidden="true"
+              />
             </a>
           </nav>
 

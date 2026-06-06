@@ -7,7 +7,6 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="footer__container">
-        {/* Navegación secundaria: Enlaces directos a perfiles profesionales */}
         <div className="footer__social">
           <a href="mailto:coletcristina@gmail.com" className="footer__link">
             Email
@@ -16,8 +15,9 @@ function Footer() {
           <a
             href="https://github.com/colet-cristina"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="footer__link"
+            aria-label="Ir al perfil de GitHub (se abre en una nueva pestaña)"
           >
             GitHub
           </a>
@@ -25,14 +25,14 @@ function Footer() {
           <a
             href="https://linkedin.com/in/cristina-colet-corredera/"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="footer__link"
+            aria-label="Ir al perfil de LinkedIn (se abre en una nueva pestaña)"
           >
             LinkedIn
           </a>
         </div>
 
-        {/* Información legal y de autoría: Copyright dinámico */}
         <p className="footer__copy">
           &copy; {currentYear} - Desarrollado por Cristina Colet
         </p>

@@ -49,9 +49,15 @@ function GardenCode() {
   return (
     <section id="garden-code" className="garden">
       {/* Elementos decorativos petálos sakura */}
-      <div className="sakura_branch sakura_branch-left"></div>
-      <div className="sakura_branch sakura_branch-right"></div>
-      <div className="falling_petals">
+      <div
+        className="sakura_branch sakura_branch--left"
+        aria-hidden="true"
+      ></div>
+      <div
+        className="sakura_branch sakura_branch--right"
+        aria-hidden="true"
+      ></div>
+      <div className="falling_petals" aria-hidden="true">
         <span className="petal"></span>
         <span className="petal"></span>
         <span className="petal"></span>
@@ -80,14 +86,14 @@ function GardenCode() {
                 className={`garden__item ${isCenter ? "is-center" : ""}`}
               >
                 <article
-                  className="project-card"
+                  className="project__card"
                   onClick={() => openModal(project)}
                 >
                   <GardenFlower isCenter={isCenter} />
 
-                  <div className="project-card__content">
-                    <h3 className="project-card__name">{project.title}</h3>
-                    <span className="project-card__plus">info</span>
+                  <div className="project__card-content">
+                    <h3 className="project__card-name">{project.title}</h3>
+                    <span className="project__card-plus">info</span>
                   </div>
                 </article>
                 {/* Tallo que conecta las flores */}
@@ -118,46 +124,46 @@ function GardenCode() {
 
       {/* -- MODAL -- */}
       {selectedProject && (
-        <div className="modal-overlay" onClick={closeModal}>
+        <div className="modal__overlay" onClick={closeModal}>
           <div
-            className="modal-content is-active"
+            className="modal__content is-active"
             onClick={(e) => e.stopPropagation()}
           >
             <button
-              className="modal-close"
+              className="modal__close"
               onClick={closeModal}
               aria-label="Cerrar modal"
             >
               &times;
             </button>
 
-            <div className="modal-body">
+            <div className="modal__body">
               <img
                 src={getProjectImg(selectedProject.image)}
                 alt={`Captura de ${selectedProject.title}`}
-                className="modal-img"
+                className="modal__img"
               />
-              <div className="modal-info">
-                <h3 className="modal-title">{selectedProject.title}</h3>
-                <p className="modal-description">
+              <div className="modal__info">
+                <h3 className="modal__title">{selectedProject.title}</h3>
+                <p className="modal__description">
                   {selectedProject.description}
                 </p>
 
-                <div className="modal-tech">
+                <div className="modal__tech">
                   {selectedProject.tech.map((skill, index) => (
-                    <span key={index} className="tech-tag">
+                    <span key={index} className="tech__tag">
                       {skill}
                     </span>
                   ))}
                 </div>
 
-                <div className="modal-actions">
+                <div className="modal__actions">
                   {selectedProject.demo && (
                     <a
                       href={selectedProject.demo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="modal-demo"
+                      className="modal__demo"
                     >
                       Ver Demo
                     </a>
@@ -166,7 +172,7 @@ function GardenCode() {
                     href={selectedProject.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="modal-repo"
+                    className="modal__repo"
                   >
                     Explorar código
                   </a>
