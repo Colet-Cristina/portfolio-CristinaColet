@@ -37,7 +37,7 @@ Para materializar esta filosofía, el portfolio sigue una estructura limpia, mod
 │   └── GardenFlower.jsx # Componentes interactivos del jardín
 │
 ├── pages/               # Secciones principales de la SPA (Vistas)
-│   ├── Hero.jsx         # Bienvenida y presentación potente
+│   ├── Hero.jsx         # Bienvenida y presentación
 │   ├── Roots.jsx        # Mis raíces (Bio e Historia)
 │   ├── GardenCode.jsx   # El jardín de código (Showroom de proyectos)
 │   └── Tools.jsx        # Tecnologías y herramientas (El Dojo de habilidades)
@@ -49,7 +49,7 @@ Para materializar esta filosofía, el portfolio sigue una estructura limpia, mod
 └── styles/              # Arquitectura SASS
     ├── core/            # Variables globales, reset y animaciones
     ├── layout/          # Estilos de la estructura general
-    └── pages/           # Estilos específicos de cada sección del Dojo
+    └── pages/           # Estilos específicos de cada sección
 
 ```
 

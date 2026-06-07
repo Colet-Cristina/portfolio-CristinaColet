@@ -10,8 +10,8 @@
   height: 3rem;
   border-radius: 50%;
 
-  background-color: $color-sakura;
-  border: 0.2rem solid darken(#c84b6b, 5%);
+  background-color: $header-brown;
+  border: 0.2rem solid darken($color-red, 5%);
   box-shadow: $shadow-strong;
 
   display: flex;
@@ -24,7 +24,7 @@
     font-size: 1.5rem;
     font-weight: bold;
     line-height: 1;
-    color: #c84b6b;
+    color: $color-red;
     display: inline-block;
     transform: rotate(-90deg);
   }

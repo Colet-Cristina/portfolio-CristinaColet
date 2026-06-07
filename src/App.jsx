@@ -18,13 +18,6 @@ import TopBtn from "./pages/TopBtn";
  * Define el contenedor principal y la lógica de renderizado.
  */
 function App() {
-  const handleTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
-
   return (
     <div className="layout">
       <Header />

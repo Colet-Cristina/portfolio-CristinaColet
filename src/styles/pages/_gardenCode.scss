@@ -197,7 +197,6 @@
   transform: rotate(20deg);
 }
 .sakura_branch--right {
-  /* Por defecto en móvil: oculta */
   display: none;
 }
 
@@ -247,12 +246,12 @@
   width: 100%;
   height: 100%;
   background: rgba($color-sakura, 0.2);
-  backdrop-filter: blur(0.5rem); // Efecto esmerilado
+  backdrop-filter: blur(0.5rem);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
-  padding: 1.25rem;
+  padding: 1rem;
   animation: fadeIn 0.3s ease;
 }
 
@@ -266,11 +265,10 @@
     #c84b6b 100%
   );
   width: 90%;
-  max-width: 37.5rem;
+  max-width: 30rem;
   border-radius: 2rem;
   position: relative;
   padding: 2rem;
-  border-radius: 2rem;
   &.is-active {
     animation: fadeInStone 0.5s ease-in-out both;
   }
@@ -287,9 +285,8 @@
 }
 
 .modal__img {
-  width: 90%;
+  width: 85%;
   border-radius: 0.5rem;
-  margin-bottom: 1.5rem;
   border: 0.0625rem solid rgba($color-stone, 1);
 }
 
@@ -300,18 +297,19 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  text-align: center;
 }
 .modal__description {
   color: $text-color;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
   font-weight: bold;
+  text-align: center;
 }
 
 .modal__actions {
   display: flex;
-  gap: 2.5rem;
+  gap: 1rem;
   margin-top: 1.5rem;
   justify-content: center;
   flex-wrap: wrap;
