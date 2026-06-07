@@ -3,7 +3,10 @@
 .garden {
   padding: 7.5rem 0 2rem 0;
   position: relative;
+  width: 100%;
+  max-width: 100vw;
   overflow: hidden;
+  overflow-x: hidden;
 
   // Entrada suave de la sección
   animation: fadeInStone 2s ease-in-out both;
@@ -42,9 +45,9 @@
     position: relative;
     width: 100%;
     overflow: hidden;
-    padding-bottom: 5rem;
-    padding: 0 2rem;
     overflow-x: hidden;
+    padding-bottom: 5rem;
+    padding: 0 1rem;
   }
   // Lista dinámica: Gestiona el centrado mediante cálculos de padding
   &__list {

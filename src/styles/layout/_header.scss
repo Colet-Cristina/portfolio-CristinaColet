@@ -14,7 +14,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    left: 0.9rem;
+
     padding: 0 0.6rem;
     position: relative;
   }
@@ -22,7 +22,7 @@
   // Identidad visual (Sello Hanko)
   &__seal {
     position: absolute;
-    left: -0.5rem;
+    left: 0.5rem;
     height: 3rem;
     width: auto;
     opacity: 0;
@@ -30,7 +30,7 @@
     animation-delay: 0.5s;
   }
 
-  /* --- BOTÓN HAMBURGUESA (Solo Móvil) --- */
+  /* --- BOTÓN HAMBURGUESA --- */
   &__menu-btn {
     display: flex;
     flex-direction: column;
@@ -70,26 +70,25 @@
 
   /* --- NAVEGACIÓN (Desplegable) --- */
   &__nav {
-    position: absolute;
+    display: none;
+    position: fixed;
     top: 3.5rem;
-    right: -1.5rem;
-
+    right: 0;
     background: $background-color;
     display: flex;
     flex-direction: column;
-
     align-items: center;
-
+    width: 12rem;
     border: 0.3rem solid $color-red;
     border-top: 0.125rem solid $color-red;
     border-bottom: 0.125rem solid $color-red;
 
     transition: transform 0.4s ease-in-out;
-    transform: translateX(130%); // Escondido a la derecha
+    transform: translateX(100%);
     box-shadow: -0.3125rem 0 0.9375rem rgba(0, 0, 0, 0.2);
 
     &.is-active {
-      transform: translateX(-23%);
+      transform: translateX(0);
     }
   }
 
@@ -111,7 +110,7 @@
     text-decoration: none;
     color: $color-red;
     font-family: $font-japanese;
-    padding: 0.875rem 2rem;
+
     font-size: 1.25rem;
     font-weight: bold;
 
@@ -184,81 +183,80 @@
 
   /* --- MEDIA QUERIES (TABLET) --- */
   @media (min-width: $breakpoint-tablet) {
-    .header {
-      height: 7rem;
+    height: 7rem;
 
-      &__container {
-        padding: 0 4rem;
-        flex-direction: row;
+    &__container {
+      padding: 0 4rem;
+      flex-direction: row;
+    }
+
+    &__seal {
+      position: absolute;
+      left: 4rem;
+    }
+
+    &__menu-btn {
+      display: none;
+    }
+
+    &__nav {
+      display: flex;
+      position: absolute;
+      right: -1rem;
+      margin: 0;
+      height: auto;
+      width: auto;
+      background: transparent;
+      transform: translateX(0);
+      box-shadow: none;
+      border: none;
+      display: flex;
+    }
+
+    &__list {
+      display: flex;
+      gap: 0.2rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    &__nav-item {
+      font-weight: 500;
+      letter-spacing: 0.05rem;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      font-weight: bold;
+      border: 0.0625rem solid transparent;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+      &:hover {
+        background-color: $color-red;
+        color: $background-color;
+        box-shadow: inset 0 0 0.5rem rgba(0, 0, 0, 0.1);
       }
 
-      &__seal {
-        position: absolute;
-        left: 4rem;
-      }
+      // &.is-active {
+      //   border: 0.0625rem solid $color-red;
+      //   color: $color-red;
+      // }
+    }
 
-      &__menu-btn {
-        display: none;
-      }
+    &__title {
+      justify-content: center;
+    }
 
-      &__nav {
-        position: absolute;
-        right: -1rem;
-        margin: 0;
-        height: auto;
-        width: auto;
-        background: transparent;
-        transform: translateX(0);
-        box-shadow: none;
-        border: none;
-        display: flex;
-      }
+    &__title-link {
+      .scroll__roller {
+        width: 1.2rem;
+        height: 4.5rem;
 
-      &__list {
-        display: flex;
-        gap: 0.2rem;
-        margin: 0;
-        padding: 0;
-      }
-
-      &__nav-item {
-        font-weight: 500;
-        letter-spacing: 0.05rem;
-        padding: 0.5rem 1rem;
-        border-radius: 0.5rem;
-        font-weight: bold;
-        border: 0.0625rem solid transparent;
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-
-        &:hover {
-          background-color: $color-red;
-          color: $background-color;
-          box-shadow: inset 0 0 0.5rem rgba(0, 0, 0, 0.1);
+        &--left {
+          width: 0.5rem;
         }
-
-        // &.is-active {
-        //   border: 0.0625rem solid $color-red;
-        //   color: $color-red;
-        // }
       }
 
-      &__title {
-        justify-content: center;
-      }
-
-      &__title-link {
-        .scroll__roller {
-          width: 1.2rem;
-          height: 4.5rem;
-
-          &--left {
-            width: 0.5rem;
-          }
-        }
-
-        .scroll__text {
-          font-size: 2.5rem;
-        }
+      .scroll__text {
+        font-size: 2.5rem;
       }
     }
   }

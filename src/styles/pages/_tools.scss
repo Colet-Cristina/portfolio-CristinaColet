@@ -96,6 +96,7 @@
         width: 100%;
         height: 100%;
         z-index: -1;
+        pointer-events: none;
 
         background-image: url("/src/images/design/katanas.png");
         background-repeat: no-repeat;
@@ -152,7 +153,7 @@
     animation: fadeInUp 0.8s ease-out forwards;
   }
 
-  /* El Marco  */
+  /* Marco  */
   &__frame {
     background-color: $color-paper;
     border: 0.3rem solid $color-wood;
@@ -230,29 +231,13 @@
     cursor: pointer;
   }
 
-  // Capa oscura translúcida de fondo que cubre toda la pantalla
-  &__modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
-    padding: 1rem;
-
-    animation: fadeIn 0.3s ease-out both;
-  }
-
   &__modal-container {
     position: absolute;
-    top: 98%;
-    transform: translateX(-50%);
+    bottom: 6rem;
+    width: 100%;
+
     background-color: rgba(0, 0, 0, 0.75);
     border-radius: 0.4rem;
-    max-width: 25rem;
     padding: 1.2rem 1rem;
     box-shadow: $shadow-strong;
     z-index: 100;
@@ -269,8 +254,10 @@
     margin: 0;
 
     overflow-x: auto;
+    overflow-y: hidden;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
+    touch-action: pan-x;
 
     scrollbar-width: none;
     &::-webkit-scrollbar {
@@ -286,7 +273,6 @@
     padding: 0.5rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
     box-shadow: $sombra-inner;
   }
@@ -306,7 +292,6 @@
 
   // Título
   &__scroll-title {
-    font-size: 0.7rem;
     color: $color-wood;
     font-weight: 700;
     line-height: 1.2;

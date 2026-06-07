@@ -81,7 +81,7 @@ function Tools() {
             ))}
         </ul>
 
-        {/* SECCIÓN HERRAMIENTAS */}
+        {/* SECCIÓN WORKFLOW */}
         <div className="tools__kakemono">
           <h3 className="tools__subtitle">Workflow</h3>
         </div>
@@ -120,32 +120,32 @@ function Tools() {
         {showCertificates &&
           certificatesData &&
           certificatesData.length > 0 && (
-            <div className="tools__modal-overlay">
-              <div className="tools__modal-container">
-                <ul className="tools__scroll-carousel">
-                  {certificatesData.map((cert) => {
-                    const fullImgPath = getCertImg(cert.image);
+            // <div className="tools__modal-overlay">
+            <div className="tools__modal-container">
+              <ul className="tools__scroll-carousel">
+                {certificatesData.map((cert) => {
+                  const fullImgPath = getCertImg(cert.image);
 
-                    return (
-                      <li key={cert.id} className="tools__scroll-card">
-                        <div className="tools__scroll-img-wrapper">
-                          <img
-                            src={fullImgPath}
-                            alt={`Certificado ${cert.title}`}
-                            className="tools__scroll-img"
-                          />
-                        </div>
-                        <div className="tools__scroll-info">
-                          <strong className="tools__scroll-title">
-                            {cert.title}
-                          </strong>
-                        </div>
-                      </li>
-                    );
-                  })}
-                </ul>
-              </div>
+                  return (
+                    <li key={cert.id} className="tools__scroll-card">
+                      <div className="tools__scroll-img-wrapper">
+                        <img
+                          src={fullImgPath}
+                          alt={`Certificado ${cert.title}`}
+                          className="tools__scroll-img"
+                        />
+                      </div>
+                      <div className="tools__scroll-info">
+                        <strong className="tools__scroll-title">
+                          {cert.title}
+                        </strong>
+                      </div>
+                    </li>
+                  );
+                })}
+              </ul>
             </div>
+            // {/* </div> */}
           )}
       </div>
 

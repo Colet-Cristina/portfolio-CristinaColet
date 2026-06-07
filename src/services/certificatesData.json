@@ -5,14 +5,24 @@
     "image": "adalab.jpg"
   },
   {
+    "id": "javascript",
+    "title": "Fundamentos de JavaScript",
+    "image": "javascript.jpg"
+  },
+  {
     "id": "animaciones-css-1",
-    "title": "Animaciones con CSS",
+    "title": "Animaciones con CSS (10 horas)",
     "image": "animaciones-CSS-1.jpg"
   },
   {
     "id": "animaciones-css-2",
-    "title": "Curso de Animaciones con CSS",
+    "title": "Animaciones con CSS (11 horas)",
     "image": "animaciones-CSS-2.jpg"
+  },
+  {
+    "id": "transfor-transi-css",
+    "title": "Transformaciones y Transiciones en CSS",
+    "image": "transfor-transi-css.jpg"
   },
   {
     "id": "git-github",
@@ -23,15 +33,5 @@
     "id": "html",
     "title": "HTML",
     "image": "html.jpg"
-  },
-  {
-    "id": "javascript",
-    "title": "Fundamentos de JavaScript",
-    "image": "javascript.jpg"
-  },
-  {
-    "id": "transfor-transi-css",
-    "title": "Transformaciones y Transiciones en CSS",
-    "image": "transfor-transi-css.jpg"
   }
 ]
