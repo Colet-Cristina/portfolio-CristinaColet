@@ -1,0 +1,31 @@
+/* --- ESTILOS EXCLUSIVOS DEL BOTÓN TOP --- */
+
+.top-btn {
+  position: fixed;
+  bottom: 6rem;
+  right: 1.5rem;
+  z-index: 99;
+
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+
+  background-color: $color-sakura;
+  border: 0.2rem solid darken(#c84b6b, 5%);
+  box-shadow: $shadow-strong;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: $base-transition;
+
+  &__arrow {
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1;
+    color: #c84b6b;
+    display: inline-block;
+    transform: rotate(-90deg);
+  }
+}

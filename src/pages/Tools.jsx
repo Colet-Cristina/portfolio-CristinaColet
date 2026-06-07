@@ -136,9 +136,7 @@ function Tools() {
                         />
                       </div>
                       <div className="tools__scroll-info">
-                        <strong className="tools__scroll-title">
-                          {cert.title}
-                        </strong>
+                        <h4 className="tools__scroll-title">{cert.title}</h4>
                       </div>
                     </li>
                   );

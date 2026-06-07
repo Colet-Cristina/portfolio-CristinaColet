@@ -11,12 +11,20 @@ import Hero from "./pages/Hero";
 import Roots from "./pages/Roots";
 import GardenCode from "./pages/GardenCode";
 import Tools from "./pages/Tools";
+import TopBtn from "./pages/TopBtn";
 
 /**
  * Función App
  * Define el contenedor principal y la lógica de renderizado.
  */
 function App() {
+  const handleTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div className="layout">
       <Header />
@@ -42,6 +50,7 @@ function App() {
         </section>
       </main>
       <Footer />
+      <TopBtn />
     </div>
   );
 }
