@@ -23,7 +23,7 @@
     top: 5.5rem;
     width: 0.4rem;
     height: 6rem;
-    background: linear-gradient(to bottom, #5d7d50, #2e402e);
+    background: $flower-stem;
     z-index: 1;
     transition: height 1s ease;
   }
@@ -34,7 +34,7 @@
     top: 8.5rem;
     width: 1.5rem;
     height: 1rem;
-    background: #5d7d50;
+    background: $flower-leaf;
     z-index: 1;
     transition: all 1s ease;
 
@@ -81,21 +81,23 @@
 
   /* --- ESTADO: FLOR ABIERTA (ACTIVA) --- */
   &.flower--active {
+    // Internos
     #l1,
     #r1 {
-      fill: #fae3e9;
-    } // Internos
+      fill: $flower-petals-inner;
+    }
+    // Medios
     #l2,
     #r2 {
-      fill: #eb6383;
-    } // Medios
+      fill: $flower-petals-medium;
+    }
+    // Exteriores
     #l3,
     #r3 {
-      fill: #c84b6b;
-    } // Exteriores
-
+      fill: $flower-petals-outer;
+    }
     #center {
-      stroke: #f2a2b1;
+      stroke: $flower-petals-central;
     }
 
     .flower__petal--left,

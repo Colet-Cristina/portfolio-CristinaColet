@@ -7,21 +7,21 @@ $breakpoint-desktop: 75rem; // 1200px
 /* --- PALETA DE COLORES --- */
 
 /* --- colores temáticos --- */
-$background-color: #f3d4a6;
 $header-brown: #eebb6e;
+$color-cream-dark: #f3d4a6;
 $color-water: #a8d5e2;
-$color-green: #196933;
-$color-darkGreen: #1b4e1b;
 $color-red: #c0392b;
 $color-sakura: #fec5e5;
-$color-stone: grey;
-$color-pared: #f8e2c1;
+$color-stone: #8a8a8a;
+$color-wall: #f8e2c1;
 
-$tatami-paja: #d8c28f;
-$tatami-borde: #222222;
+$tatami-straw: #d8c28f;
+$tatami-border: #222222;
 
 /* --- TIPOGRAFÍA --- */
 $text-color: #333333;
+$text-color-green: #196933;
+$text-color-dark-green: #1b4e1b;
 $text-modal-btn: #cc1845;
 $font-japanese: "Yuji Syuku", serif;
 $font-body: "Lora", serif;
@@ -30,8 +30,16 @@ $font-body: "Lora", serif;
 $stone-gradient: radial-gradient(circle at 30% 30%, #a8a8a8, #696969);
 $stone-border: 0.1rem solid rgba(0, 0, 0, 0.1);
 
-/* --- ESTETICA CUADROS --- */
+/* --- ESTÉTICA FLORES --- */
+$flower-stem: linear-gradient(to bottom, #8fbe7c, #2e402e);
+$flower-leaf: #5d7d50;
 
+$flower-petals-central: #f2a2b1;
+$flower-petals-inner: #fae3e9;
+$flower-petals-medium: #eb6383;
+$flower-petals-outer: #c84b6b;
+
+/* --- ESTÉTICA CUADROS --- */
 $color-wood: #663716;
 $color-paper: #f7eecc;
 $base-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -45,8 +53,3 @@ $sombra-inner: inset 0 0.625rem 1.25rem rgba(0, 0, 0, 0.2);
 $shadow-stone:
   inset -0.25rem -0.25rem 0.5rem rgba(0, 0, 0, 0.4),
   0.25rem 0.5rem 0.9375rem rgba(0, 0, 0, 0.3);
-
-// Temáticas
-$shadow-green: 0.625rem 0.625rem 1.25rem rgba(45, 90, 39, 0.5);
-$shadow-sakura: 0 0.25rem 0.75rem rgba(254, 197, 229, 0.4);
-$shadow-red-hover: 0.625rem 0.625rem 1.25rem rgba(192, 57, 43, 0.5);

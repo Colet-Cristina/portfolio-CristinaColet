@@ -1,7 +1,7 @@
 /* --- TOOLS:  Galería de habilidades con estética tradicional japonesa. --- */
 
 .tools {
-  background-color: $color-pared;
+  background-color: $color-wall;
   min-height: auto;
   height: auto;
   position: relative;
@@ -57,7 +57,7 @@
       repeating-linear-gradient(
         to right,
         $color-wood,
-        rgba($tatami-borde, 0.6) 0.4rem,
+        rgba($tatami-border, 0.6) 0.4rem,
         transparent 0.4rem,
         transparent 14rem
       ),
@@ -116,7 +116,7 @@
   }
 
   &__kakemono {
-    background-color: $tatami-paja;
+    background-color: $tatami-straw;
     border-left: 0.2rem solid $color-wood;
     border-right: 0.2rem solid $color-wood;
     padding: 0.01rem 1rem;

@@ -17,9 +17,9 @@
   // Fondo base: Transición cromática de arena a agua
   background: linear-gradient(
     to bottom,
-    $background-color 0%,
-    $background-color 30%,
-    mix($background-color, #a8d5e2, 10%) 60%,
+    $color-cream-dark 0%,
+    $color-cream-dark 30%,
+    mix($color-cream-dark, #a8d5e2, 10%) 60%,
     #a8d5e2 85%
   );
 
@@ -59,12 +59,12 @@
     width: 100%;
     height: 100%;
 
-    background-image: 
+    background-image:
       // Ondas de arena
       repeating-linear-gradient(
         170deg,
-        rgba($color-green, 0.07) 0,
-        rgba($color-green, 0.07) 0.0625rem,
+        rgba($color-stone, 0.1) 0,
+        rgba($color-stone, 0.1) 0.0625rem,
         transparent 0.0625rem,
         transparent 0.75rem
       ),
@@ -165,7 +165,7 @@
   &__greeting {
     font-family: $font-japanese;
     font-size: 1rem;
-    color: $color-darkGreen;
+    color: $text-color-dark-green;
     margin-bottom: 1.5rem;
   }
 
@@ -174,7 +174,7 @@
 
     font-size: 1rem;
     line-height: 1.6;
-    color: $color-green;
+    color: $text-color-green;
     max-width: 45rem;
     margin: 0 auto;
   }
@@ -255,9 +255,9 @@
     min-height: 70vh;
     background: linear-gradient(
       to bottom,
-      $background-color 0%,
-      $background-color 30%,
-      mix($background-color, #a8d5e2, 30%) 60%,
+      $color-cream-dark 0%,
+      $color-cream-dark 30%,
+      mix($color-cream-dark, #a8d5e2, 30%) 60%,
       #a8d5e2 85%
     );
 
