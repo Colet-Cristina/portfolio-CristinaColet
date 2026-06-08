@@ -326,10 +326,24 @@
     &__content {
       &--katanas {
         &::before {
-          background-position: center bottom 96%;
+          background-position: center bottom 97%;
           background-size: 28rem 9rem;
         }
       }
+    }
+    &__title {
+      font-size: 3rem;
+      letter-spacing: 0.3rem;
+    }
+
+    &__kakemono {
+      margin: 3rem auto; // Aún más holgura para que el diseño respire
+      padding: 0.2rem 2.5rem; // Un pergamino majestuoso y ancho
+    }
+
+    &__subtitle {
+      font-size: 1.5rem; // Subtítulo con muchísima más presencia
+      letter-spacing: 0.3rem;
     }
   }
 }
