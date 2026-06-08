@@ -204,7 +204,7 @@
     &__nav {
       display: flex;
       position: absolute;
-      top: -4rem;
+      top: -1.8rem;
       background: transparent;
       transform: translateX(0);
       box-shadow: none;
@@ -218,12 +218,6 @@
       font-weight: bold;
 
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    &__title {
-      margin: 0;
-      position: absolute;
-      left: 9rem;
     }
 
     &__title-link {
@@ -246,11 +240,33 @@
 /* --- MEDIA QUERIES (DESKTOP) --- */
 @media (min-width: $breakpoint-desktop) {
   .header {
+    &__container {
+      display: flex;
+      justify-content: center;
+    }
+
+    &__seal {
+      left: 9rem;
+    }
+    &__title {
+      position: static;
+      margin: 0 auto;
+    }
+
+    &__nav {
+      position: absolute;
+      top: 1.25rem;
+      right: 2.5rem;
+      width: auto;
+      text-align: right;
+    }
+
     &__list {
       display: flex;
       flex-direction: row;
-
+      gap: 1.5rem;
       margin: 0;
+      padding: 0;
     }
   }
 }
