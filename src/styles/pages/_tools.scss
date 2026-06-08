@@ -1,6 +1,5 @@
 /* --- TOOLS:  Galería de habilidades con estética tradicional japonesa. --- */
 
-/* --- Tools --- */
 .tools {
   background-color: $color-pared;
   min-height: auto;
@@ -12,15 +11,14 @@
   padding: 0;
   overflow: hidden;
 
-  /* --- Elementos de Ambiente --- */
+  /* --- ELEMENTOS DE AMBIENTE --- */
 
   /* Biga madera  */
   &__ceiling {
     position: absolute;
-    top: 1.5rem;
-
     width: 100%;
     z-index: 10;
+
     &::before {
       content: "";
       position: absolute;
@@ -31,10 +29,8 @@
       background-color: $color-wood;
       box-shadow: $shadow-strong;
       z-index: 11;
-      background-image: 
-   
-        // 2. Sombreado inclinado para dar volumen estriado y nudos
-        linear-gradient(
+      // Sombreado inclinado para dar volumen estriado y nudos
+      background-image: linear-gradient(
         105deg,
         rgba(0, 0, 0, 0.15) 15%,
         transparent 35%,
@@ -109,6 +105,7 @@
     }
   }
 
+  /* --- TÍTULOS Y CABECERAS --- */
   &__title {
     font-family: $font-japanese;
     font-size: 2rem;
@@ -148,6 +145,7 @@
     max-width: 75rem;
     margin: 0 auto;
   }
+
   &__item {
     opacity: 0;
     animation: fadeInUp 0.8s ease-out forwards;
@@ -166,7 +164,6 @@
     transition: $base-transition;
     position: relative;
     box-shadow: $sombra-inner;
-
     overflow: hidden;
 
     &::after {
@@ -190,7 +187,6 @@
       pointer-events: none;
     }
 
-    // Estado interactivo
     &:hover {
       transform: translateY(0.5rem) rotate(2deg);
       box-shadow: 0.75rem 0.75rem 1.25rem rgba(0, 0, 0, 0.15);
@@ -205,7 +201,6 @@
   }
 
   /* Gestión de iconos */
-
   &__icon {
     width: 2.8rem;
     height: 2.8rem;
@@ -251,13 +246,13 @@
     list-style: none;
     padding: 0.5rem 0 1rem 0;
     margin: 0;
-
+    /* Configuración del scroll horizontal táctil y fluido */
     overflow-x: auto;
     overflow-y: hidden;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
     touch-action: pan-x;
-
+    /* Ocultar la barra de scroll en todos los navegadores */
     scrollbar-width: none;
     &::-webkit-scrollbar {
       display: none;
@@ -276,20 +271,20 @@
     box-shadow: $sombra-inner;
   }
 
-  // La imagen del certificado ajustada
+  /* Imagen del certificado */
   &__scroll-img {
     width: 100%;
     height: 100%;
     object-fit: contain;
   }
 
-  // Contenedor del texto inferior
+  /* Contenedor del texto */
   &__scroll-info {
     text-align: center;
     width: 100%;
   }
 
-  // Título
+  /* Título */
   &__scroll-title {
     color: $color-wood;
     font-weight: 700;
@@ -305,7 +300,7 @@
 
       &--katanas {
         &::before {
-          background-position: center bottom 95%;
+          background-position: center bottom 97%;
           background-size: 28rem 8rem;
         }
       }
@@ -320,6 +315,10 @@
     &__icon {
       width: 4.5rem;
       height: 4.5rem;
+    }
+
+    &__modal-container {
+      bottom: 8.8rem;
     }
   }
   /* --- MEDIA QUERIES (DESKTOP) --- */
