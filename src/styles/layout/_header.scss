@@ -48,7 +48,7 @@
       height: 0.2rem;
       background: $color-red;
       border-radius: 0.625rem;
-      transition: all 0.3s ease-in-out;
+      transition: $base-transition;
       transform-origin: center;
     }
 
@@ -102,25 +102,22 @@
   }
 
   &__item {
-    list-style: none;
     display: block;
   }
 
   &__nav-item {
+    display: inline-block;
     text-decoration: none;
     color: $color-red;
     font-family: $font-japanese;
-
     font-size: 1.25rem;
     font-weight: bold;
+    transform-origin: center;
 
-    transition: all 0.3s ease;
+    transition: $base-transition;
 
-    &:active {
-      // Efecto sello al tocar en móvil
-      background-color: $color-red;
-      color: white;
-      border-radius: 0.3rem;
+    &:hover {
+      transform: scale(1.1);
     }
   }
 
@@ -176,7 +173,7 @@
         opacity: 0;
         animation: fadeIn 0.5s forwards;
         animation-delay: 2s;
-        text-shadow: 0.0625rem 0.0625rem 0 rgba(61, 60, 60, 0.3);
+        text-shadow: 0.0625rem 0.0625rem 0 $shadow-text;
       }
     }
   }
@@ -212,12 +209,9 @@
     }
 
     &__nav-item {
-      font-weight: 500;
       letter-spacing: 0.05rem;
-
       font-weight: bold;
-
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: $base-transition;
     }
 
     &__title-link {

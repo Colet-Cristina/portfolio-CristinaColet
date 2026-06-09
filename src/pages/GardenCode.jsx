@@ -73,8 +73,7 @@ function GardenCode() {
           className="garden__list"
           style={{
             /* Esta fórmula centra la flor seleccionada */
-            transform: `translateX(-${currentIndex * movementUnit}rem)`,
-            transition: "transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)",
+            "--translate-value": `-${currentIndex * movementUnit}rem`,
           }}
         >
           {projectsData.map((project, index) => {

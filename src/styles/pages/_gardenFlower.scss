@@ -10,10 +10,9 @@
   align-items: center;
   // Animación ambiental: Simula el balanceo por el viento
   animation: plantSway 6s ease-in-out infinite;
+  transform-origin: bottom center;
 
   &.flower--active {
-    animation: plantSway 6s ease-in-out infinite;
-    transform-origin: bottom center;
     transform: scale(1.1);
   }
   /* --- ESTRUCTURA FLOR --- */
@@ -57,12 +56,11 @@
     z-index: 2;
     overflow: visible;
     width: 100%;
-    filter: drop-shadow(0 0.625rem 0.9375rem rgba(0, 0, 0, 0.15));
+    filter: drop-shadow(0 0.625rem 0.9375rem rgba(#000, 0.15));
   }
 
   // Colores flor cerrada
   &__petal {
-    // Todos los pétalos comparten estas transiciones base
     transition:
       fill 1.2s ease,
       transform 1.5s ease,
@@ -70,12 +68,12 @@
 
     &--left,
     &--right {
-      fill: #f0879f;
+      fill: $flower-petals-outer;
       transform-origin: 50% 80%; // Mantiene el punto de anclaje de Matt
     }
 
     &--center {
-      fill: #f2a2b1;
+      fill: $flower-petals-central;
     }
   }
 

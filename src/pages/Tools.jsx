@@ -1,5 +1,5 @@
 /* Componente Tools */
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import skillsData from "../services/skillsData.json";
 import certificatesData from "../services/certificatesData.json";
 

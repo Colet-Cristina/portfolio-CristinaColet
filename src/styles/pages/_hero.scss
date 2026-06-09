@@ -1,14 +1,12 @@
 /* --- HERO: Sección principal con efectos de jardín zen (arena y agua) --- */
 
 .hero {
-  // Layout: Centrado de contenido con Flexbox
+  // Layout
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  // Apilamiento para capas decorativas
   position: relative;
   overflow: hidden;
   padding: 1rem 1.5rem;
@@ -19,8 +17,8 @@
     to bottom,
     $color-cream-dark 0%,
     $color-cream-dark 30%,
-    mix($color-cream-dark, #a8d5e2, 10%) 60%,
-    #a8d5e2 85%
+    mix($color-cream-dark, $color-water, 10%) 60%,
+    $color-water 85%
   );
 
   /* --- CAPA DE TEXTURA  (arena y ondas)--- */
@@ -35,13 +33,13 @@
     background-image:
       repeating-linear-gradient(
         45deg,
-        rgba(0, 0, 0, 0.05) 0.03125rem,
+        $color-texture-dark 0.03125rem,
         transparent 0.0625rem,
         transparent 0.125rem
       ),
       repeating-linear-gradient(
         -45deg,
-        rgba(0, 0, 0, 0.05) 0.03125rem,
+        $color-texture-dark 0.03125rem,
         transparent 0.0625rem,
         transparent 0.125rem
       );
@@ -71,8 +69,8 @@
       // Ondas de agua
       repeating-linear-gradient(
           162deg,
-          rgba(#fff, 0.15) 0,
-          rgba(#fff, 0.15) 0.125rem,
+          $color-texture-glow 0,
+          $color-texture-glow 0.125rem,
           transparent 0.09375rem,
           transparent 1.125rem
         );
@@ -235,11 +233,11 @@
     }
 
     &:hover {
-      color: $color-red;
+      color: $color-cream-dark;
       background-color: $text-color;
       background: radial-gradient(
         circle at 30% 30%,
-        $text-color,
+        $color-stone,
         darken($text-color, 10%)
       );
       transform: scale(1.05);
@@ -257,8 +255,8 @@
       to bottom,
       $color-cream-dark 0%,
       $color-cream-dark 30%,
-      mix($color-cream-dark, #a8d5e2, 30%) 60%,
-      #a8d5e2 85%
+      mix($color-cream-dark, $color-water, 30%) 60%,
+      $color-water 85%
     );
 
     &__content {
