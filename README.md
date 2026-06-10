@@ -72,7 +72,7 @@ Para materializar esta filosofía, el portfolio sigue una estructura limpia, mod
 
 ## 🌿 El jardin de Proyectos
 
-_Selección de proyectos cultivados con mimo y código limpio._
+[_Proyectos cultivados código._](https://github.com/Colet-Cristina?tab=repositories)
 
 ---
 
@@ -108,7 +108,7 @@ Mi objetivo es seguir cultivando mis habilidades y aportar mi capacidad de gesti
 
 Si quieres saber más o crees que mi forma de cultivar código encaja con tu equipo, ¡hablemos!
 
-[LinkedIn](https://www.linkedin.com/feed/)
+[LinkedIn](https://www.linkedin.com/in/cristina-colet-corredera/)
 
 [GitHub](https://github.com/Colet-Cristina)
 
