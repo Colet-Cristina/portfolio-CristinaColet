@@ -72,7 +72,7 @@ Para materializar esta filosofía, el portfolio sigue una estructura limpia, mod
 
 ## 🌿 El jardin de Proyectos
 
-[_Proyectos cultivados código._](https://github.com/Colet-Cristina?tab=repositories)
+[_Proyectos cultivados con código._](https://github.com/Colet-Cristina?tab=repositories)
 
 ---
 
