@@ -142,13 +142,18 @@ function Tools() {
 
                   return (
                     <li key={cert.id} className="tools__scroll-card">
-                      <div className="tools__scroll-img-wrapper">
+                      <a
+                        href={fullImgPath}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="tools__scroll-img-wrapper"
+                      >
                         <img
                           src={fullImgPath}
                           alt={`Certificado ${cert.title}`}
                           className="tools__scroll-img"
                         />
-                      </div>
+                      </a>
                       <div className="tools__scroll-info">
                         <h4 className="tools__scroll-title">{cert.title}</h4>
                       </div>
