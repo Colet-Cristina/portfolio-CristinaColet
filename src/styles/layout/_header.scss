@@ -4,10 +4,12 @@
   border-bottom: 0.06rem solid darken($color-red, 5%);
   box-shadow: $shadow-soft;
   position: relative;
-  z-index: 10;
   height: 4rem;
   display: flex;
   align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 
   &__container {
     display: flex;

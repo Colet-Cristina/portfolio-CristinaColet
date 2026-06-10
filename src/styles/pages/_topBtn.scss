@@ -31,3 +31,16 @@
     transform: rotate(-90deg);
   }
 }
+
+/* --- MEDIA QUERIES (TABLET) --- */
+@media (min-width: $breakpoint-tablet) {
+  .top-btn {
+    right: 3rem;
+    width: 4rem;
+    height: 4rem;
+
+    &__arrow {
+      font-size: 1.9rem;
+    }
+  }
+}

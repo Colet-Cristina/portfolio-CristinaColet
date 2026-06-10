@@ -50,18 +50,18 @@ function Header() {
         <nav className={`header__nav ${isOpen ? "is-active" : ""}`}>
           <ul className="header__list">
             <li className="header__item">
-              <a href="#roots" className="header__nav-item" onClick={closeMenu}>
-                Raíces
-              </a>
-            </li>
-
-            <li className="header__item">
               <a
                 href="#garden-code"
                 className="header__nav-item"
                 onClick={closeMenu}
               >
                 Jardín
+              </a>
+            </li>
+
+            <li className="header__item">
+              <a href="#roots" className="header__nav-item" onClick={closeMenu}>
+                Raíces
               </a>
             </li>
 

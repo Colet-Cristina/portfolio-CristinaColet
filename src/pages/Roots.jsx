@@ -29,6 +29,18 @@ function Roots() {
           búsqueda del equilibrio; un camino que nació en Adalab y que sigo
           recorriendo cada día.
         </p>
+        <p className="roots__text roots__text--center">
+          Puedes{" "}
+          <a
+            href="/Cristina_Colet_CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="roots__cv-link js-cv-link"
+          >
+            descargar mi CV aquí
+          </a>
+          .
+        </p>
       </div>
     </section>
   );
