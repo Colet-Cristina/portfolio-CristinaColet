@@ -33,9 +33,8 @@
     align-self: center;
     margin-top: 2rem;
     max-width: 100%;
-
-    animation: fadeInUp 1.2s ease forwards;
   }
+
   &__main-title {
     font-family: $font-japanese;
     font-size: 3rem;
@@ -63,23 +62,19 @@
     font-weight: bolder;
     max-width: 65%;
     line-height: 1.6;
-    opacity: 0;
+    opacity: 1;
 
     backdrop-filter: blur(0.1rem);
     padding: 0.5rem;
-
-    animation: fadeInUp 1s ease forwards;
 
     /* Posicionamiento por bloques */
     &--right {
       align-self: flex-end;
       text-align: right;
-      animation-delay: 0.8s;
     }
 
     &--left {
       text-align: left;
-      animation-delay: 1s;
     }
 
     &--center {
@@ -87,7 +82,6 @@
       text-align: center;
       max-width: 22rem;
       font-weight: 700;
-      animation-delay: 1.6s;
     }
 
     .roots__cv-link {
@@ -159,7 +153,7 @@
   .roots {
     &__container {
       margin-left: 4rem;
-      margin-top: 5rem;
+      margin-top: 3rem;
     }
 
     &__main-title {

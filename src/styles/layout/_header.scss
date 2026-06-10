@@ -156,14 +156,14 @@
         white-space: nowrap;
         width: 0;
         display: block;
-
-        animation: openScroll 1s cubic-bezier(0.45, 0.05, 0.55, 0.95) forwards;
-        animation-delay: 1.3s;
         border-top: 0.125rem solid $color-cream-dark;
         border-bottom: 0.125rem solid $color-cream-dark;
         box-shadow:
           inset 1rem 0 1rem -0.5rem rgba(0, 0, 0, 0.2),
           inset -1rem 0 1rem -0.5rem rgba(0, 0, 0, 0.2);
+
+        animation: openScroll 1s cubic-bezier(0.45, 0.05, 0.55, 0.95) forwards;
+        animation-delay: 1.3s;
       }
 
       .scroll__text {
@@ -174,9 +174,10 @@
         font-weight: bold;
         padding: 0 0.5rem;
         opacity: 0;
+        text-shadow: 0.0625rem 0.0625rem 0 $shadow-text;
+
         animation: fadeIn 0.5s forwards;
         animation-delay: 2s;
-        text-shadow: 0.0625rem 0.0625rem 0 $shadow-text;
       }
     }
   }

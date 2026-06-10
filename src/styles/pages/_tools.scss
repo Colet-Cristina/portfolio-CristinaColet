@@ -144,11 +144,6 @@
     margin: 0 auto;
   }
 
-  &__item {
-    opacity: 0;
-    animation: fadeInUp 0.8s ease-out forwards;
-  }
-
   /* Marco  */
   &__frame {
     background-color: $color-paper;
