@@ -22,7 +22,7 @@ function Header() {
 
         {/* Título dinámico: Implementa el efecto visual de un pergamino (scroll) */}
         <div className="header__title">
-          <a href="#hero" className="header__title-link scroll">
+          <div className="header__title-link scroll">
             {/* Elementos decorativos del pergamino */}
             <span className="scroll__roller scroll__roller--left"></span>
 
@@ -31,7 +31,7 @@ function Header() {
             </span>
 
             <span className="scroll__roller scroll__roller--right"></span>
-          </a>
+          </div>
         </div>
 
         {/* Botón Hamburguesa */}

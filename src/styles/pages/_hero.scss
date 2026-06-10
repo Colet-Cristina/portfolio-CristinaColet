@@ -15,9 +15,9 @@
   // Fondo base: Transición cromática de arena a agua
   background: linear-gradient(
     to bottom,
-    $color-cream-dark 0%,
-    $color-cream-dark 30%,
-    mix($color-cream-dark, $color-water, 10%) 60%,
+    $color-cream 0%,
+    $color-cream 30%,
+    mix($color-cream, $color-water, 10%) 60%,
     $color-water 85%
   );
 
@@ -123,9 +123,22 @@
     font-size: 2.5rem;
     color: $color-red;
   }
-  &__stack {
+
+  &__greeting {
+    font-family: $font-japanese;
     font-size: 1rem;
-    margin-bottom: 1rem;
+    color: $text-color-dark-green;
+    font-weight: bold;
+    margin-bottom: 2.5rem;
+  }
+
+  &__description {
+    font-family: $font-body;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: $text-color-dark-green;
+    max-width: 45rem;
+    margin: 0 auto;
   }
 
   // Redes sociales
@@ -133,7 +146,7 @@
     display: flex;
     justify-content: center;
     gap: 1.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 
     &-item {
       width: 2.5rem;
@@ -158,23 +171,6 @@
       width: auto;
       display: block;
     }
-  }
-
-  &__greeting {
-    font-family: $font-japanese;
-    font-size: 1rem;
-    color: $text-color-dark-green;
-    margin-bottom: 1.5rem;
-  }
-
-  &__description {
-    font-family: $font-body;
-
-    font-size: 1rem;
-    line-height: 1.6;
-    color: $text-color-green;
-    max-width: 45rem;
-    margin: 0 auto;
   }
 
   /* --- NAVEGACIÓN ESTILO PIEDRA --- */
@@ -233,7 +229,7 @@
     }
 
     &:hover {
-      color: $color-cream-dark;
+      color: $color-cream;
       background-color: $text-color;
       background: radial-gradient(
         circle at 30% 30%,
@@ -250,21 +246,25 @@
 /* --- MEDIA QUERIES (TABLET-DESKTOP) --- */
 @media (min-width: $breakpoint-tablet) {
   .hero {
+    // Degradado más suave para evita un corte brusco de color
     min-height: 70vh;
     background: linear-gradient(
       to bottom,
-      $color-cream-dark 0%,
-      $color-cream-dark 30%,
-      mix($color-cream-dark, $color-water, 30%) 60%,
+      $color-cream 0%,
+      $color-cream 30%,
+      mix($color-cream, $color-water, 30%) 60%,
       $color-water 85%
     );
 
     &__content {
-      margin-bottom: 7rem;
+      margin-bottom: 3rem;
     }
 
     &__name {
       font-size: 4.5rem;
+    }
+    &__greeting {
+      font-size: 1.5rem;
     }
 
     &__description {
@@ -273,8 +273,17 @@
       margin-left: auto;
       margin-right: auto;
     }
+
+    &__social {
+      margin-bottom: 4rem;
+      &-item {
+        width: 4rem;
+        height: 4rem;
+      }
+    }
+
     &__list {
-      gap: 6rem;
+      gap: 8rem;
     }
     &__link {
       width: 10rem;

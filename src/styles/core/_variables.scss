@@ -4,17 +4,30 @@
 $breakpoint-tablet: 48rem; // 768px
 $breakpoint-desktop: 75rem; // 1200px
 
+/* --- TIPOGRAFÍA --- */
+$text-color: #333333;
+$text-color-green: #196933;
+$text-color-dark-green: #1b4e1b;
+$text-modal-btn: #cc1845;
+$font-japanese: "Yuji Syuku", serif;
+$font-body: "Lora", serif;
+
 /* --- PALETA DE COLORES --- */
 
 /* --- colores temáticos --- */
 $header-brown: #eebb6e;
-$color-cream-dark: #f3d4a6;
+$color-cream: #f3d4a6;
+$color-cream-dark: #c0a884;
 $color-water: #a8d5e2;
 $color-white: #ffffff;
 $color-red: #c0392b;
 $color-sakura: #fec5e5;
 $color-stone: #8a8a8a;
 $color-wall: #f8e2c1;
+
+$color-wood: #663716;
+$color-wood-light: #c29d6d;
+$color-paper: #f7eecc;
 
 $tatami-straw: #d8c28f;
 $tatami-border: #222222;
@@ -30,14 +43,6 @@ $garden-green-glow: #c8f3ce;
 $color-texture-dark: rgba(#000, 0.05);
 $color-texture-glow: rgba(#fff, 0.15);
 
-/* --- TIPOGRAFÍA --- */
-$text-color: #333333;
-$text-color-green: #196933;
-$text-color-dark-green: #1b4e1b;
-$text-modal-btn: #cc1845;
-$font-japanese: "Yuji Syuku", serif;
-$font-body: "Lora", serif;
-
 /* --- ESTÉTICA DE PIEDRA --- */
 $stone-gradient: radial-gradient(circle at 30% 30%, #a8a8a8, #696969);
 $stone-border: 0.1rem solid rgba(#000, 0.1);
@@ -50,10 +55,6 @@ $flower-petals-central: #f2a2b1;
 $flower-petals-inner: #fae3e9;
 $flower-petals-medium: #eb6383;
 $flower-petals-outer: #c84b6b;
-
-/* --- ESTÉTICA CUADROS --- */
-$color-wood: #663716;
-$color-paper: #f7eecc;
 
 /* --- SOMBRAS --- */
 $shadow-text: rgba(61, 60, 60, 0.3);

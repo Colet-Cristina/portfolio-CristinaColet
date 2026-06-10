@@ -11,56 +11,6 @@ function Hero() {
         <div className="hero__content">
           {/* Información personal y título */}
           <h1 className="hero__name">Cristina Colet</h1>
-
-          {/* Navegación social: Enlaces externos y contacto directo */}
-          <nav className="hero__social" aria-label="Redes sociales y contacto">
-            {/* Contacto, Email */}
-            <a
-              href="mailto:coletcristina@gmail.com"
-              className="hero__social-item"
-              aria-label="Enviar un correo electrónico"
-            >
-              <img
-                src={emailIcon}
-                alt="Email"
-                className="hero__social-icon"
-                aria-hidden="true"
-              />
-            </a>
-
-            {/* Acceso a GitHub */}
-            <a
-              href="https://github.com/colet-cristina"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hero__social-item"
-              aria-label="Visitar el perfil de GitHub (se abre en una nueva pestaña)"
-            >
-              <img
-                src={gitIcon}
-                alt="GitHub"
-                className="hero__social-icon"
-                aria-hidden="true"
-              />
-            </a>
-
-            {/* Acceso a Linkedin */}
-            <a
-              href="https://linkedin.com/in/cristina-colet-corredera/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hero__social-item"
-              aria-label="Visitar el perfil de Linkedin (se abre en una nueva pestaña)"
-            >
-              <img
-                src={inIcon}
-                alt="LinkedIn"
-                className="hero__social-icon"
-                aria-hidden="true"
-              />
-            </a>
-          </nav>
-
           <h3 className="hero__greeting">
             Fullstack Developer | Mi dojo digital
           </h3>
@@ -73,6 +23,55 @@ function Hero() {
             Fullstack Developer.
           </p>
         </div>
+
+        {/* Navegación social: Enlaces externos y contacto directo */}
+        <nav className="hero__social" aria-label="Redes sociales y contacto">
+          {/* Contacto, Email */}
+          <a
+            href="mailto:coletcristina@gmail.com"
+            className="hero__social-item"
+            aria-label="Enviar un correo electrónico"
+          >
+            <img
+              src={emailIcon}
+              alt="Email"
+              className="hero__social-icon"
+              aria-hidden="true"
+            />
+          </a>
+
+          {/* Acceso a GitHub */}
+          <a
+            href="https://github.com/colet-cristina"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hero__social-item"
+            aria-label="Visitar el perfil de GitHub (se abre en una nueva pestaña)"
+          >
+            <img
+              src={gitIcon}
+              alt="GitHub"
+              className="hero__social-icon"
+              aria-hidden="true"
+            />
+          </a>
+
+          {/* Acceso a Linkedin */}
+          <a
+            href="https://linkedin.com/in/cristina-colet-corredera/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hero__social-item"
+            aria-label="Visitar el perfil de Linkedin (se abre en una nueva pestaña)"
+          >
+            <img
+              src={inIcon}
+              alt="LinkedIn"
+              className="hero__social-icon"
+              aria-hidden="true"
+            />
+          </a>
+        </nav>
 
         {/* Navegación principal: Enlaces internos */}
         <nav className="hero__nav">

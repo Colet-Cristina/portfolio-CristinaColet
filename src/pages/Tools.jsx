@@ -1,5 +1,5 @@
 /* Componente Tools */
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef } from "react";
 import skillsData from "../services/skillsData.json";
 import certificatesData from "../services/certificatesData.json";
 
@@ -20,6 +20,20 @@ function Tools() {
     setShowCertificates(!showCertificates);
   };
 
+  const carouselRef = useRef(null);
+
+  // Estado botones
+  const scrollCarousel = (direction) => {
+    const container = carouselRef.current;
+    if (container) {
+      // ¡Esto evita el error! Solo se mueve si el contenedor existe
+      const scrollAmount = 300;
+      container.scrollBy({
+        left: direction === "left" ? -scrollAmount : scrollAmount,
+        behavior: "smooth",
+      });
+    }
+  };
   return (
     <section id="tools" className="tools">
       {/* --- ELEMENTOS DE FONDO --- */}
@@ -122,7 +136,7 @@ function Tools() {
           certificatesData.length > 0 && (
             // <div className="tools__modal-overlay">
             <div className="tools__modal-container">
-              <ul className="tools__scroll-carousel">
+              <ul className="tools__scroll-carousel" ref={carouselRef}>
                 {certificatesData.map((cert) => {
                   const fullImgPath = getCertImg(cert.image);
 
@@ -142,8 +156,20 @@ function Tools() {
                   );
                 })}
               </ul>
+
+              <button
+                className="tools__scroll-btn tools__scroll-btn--left"
+                onClick={() => scrollCarousel("left")}
+              >
+                ❮
+              </button>
+              <button
+                className="tools__scroll-btn tools__scroll-btn--right"
+                onClick={() => scrollCarousel("right")}
+              >
+                ❯
+              </button>
             </div>
-            // {/* </div> */}
           )}
       </div>
 

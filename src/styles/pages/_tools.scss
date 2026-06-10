@@ -236,7 +236,7 @@
     width: 100%;
     background-color: rgba(#000, 0.75);
     border-radius: 0.4rem;
-    padding: 1.2rem 1rem;
+    padding: 4rem 1rem;
     box-shadow: $shadow-strong;
     z-index: 100;
 
@@ -273,6 +273,10 @@
     flex-direction: column;
     align-items: center;
     box-shadow: $sombra-inner;
+
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
   }
 
   /* Imagen del certificado */
@@ -297,57 +301,95 @@
     overflow: hidden;
   }
 
+  &__scroll-btn {
+    display: none;
+
+    background: rgba($color-wood, 0.9);
+    color: $color-paper;
+    border: 0.1rem solid $color-paper;
+    padding: 0.5rem 0.8rem;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 1.2rem;
+  }
   /* --- MEDIA QUERIES (TABLET) --- */
   @media (min-width: $breakpoint-tablet) {
-    &__content {
-      padding: 10rem 2rem 4rem 2rem;
+    .tools {
+      &__content {
+        padding: 10rem 2rem 4rem 2rem;
 
-      &--katanas {
-        &::before {
-          background-position: center bottom 97%;
-          background-size: 28rem 8rem;
+        &--katanas {
+          &::before {
+            background-position: center bottom 97%;
+            background-size: 28rem 8rem;
+          }
         }
       }
-    }
 
-    &__frame {
-      width: 9rem;
-      height: 11rem;
-      padding: 2rem;
-    }
+      &__frame {
+        width: 8rem;
+        height: 9rem;
+        padding: 2rem;
+      }
 
-    &__icon {
-      width: 4.5rem;
-      height: 4.5rem;
-    }
+      &__icon {
+        width: 4.5rem;
+        height: 4.5rem;
+      }
 
-    &__modal-container {
-      bottom: 8.8rem;
+      &__modal-container {
+        bottom: 8.8rem;
+      }
     }
   }
   /* --- MEDIA QUERIES (DESKTOP) --- */
   @media (min-width: $breakpoint-desktop) {
-    &__content {
-      &--katanas {
-        &::before {
-          background-position: center bottom 97%;
-          background-size: 28rem 9rem;
+    .tools {
+      &__content {
+        &--katanas {
+          &::before {
+            background-position: center bottom 97%;
+            background-size: 28rem 9rem;
+          }
         }
       }
-    }
-    &__title {
-      font-size: 3rem;
-      letter-spacing: 0.3rem;
-    }
+      &__title {
+        font-size: 2.5rem;
+        letter-spacing: 0.3rem;
+      }
 
-    &__kakemono {
-      margin: 3rem auto; // Aún más holgura para que el diseño respire
-      padding: 0.2rem 2.5rem; // Un pergamino majestuoso y ancho
-    }
+      &__kakemono {
+        margin: 3rem auto;
+        padding: 0.2rem 2.5rem;
+      }
 
-    &__subtitle {
-      font-size: 1.5rem; // Subtítulo con muchísima más presencia
-      letter-spacing: 0.3rem;
+      &__subtitle {
+        font-size: 1.2rem;
+        letter-spacing: 0.3rem;
+      }
+
+      &__modal-container {
+        bottom: 15rem;
+        width: 90%;
+      }
+
+      &__scroll-btn {
+        display: block;
+        position: absolute;
+        top: auto;
+        bottom: 1rem;
+
+        &--left {
+          left: calc(50% - 4rem);
+        }
+        &--right {
+          right: calc(50% - 4rem);
+        }
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
     }
   }
 }
