@@ -13,7 +13,7 @@
 
   &__container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
 
@@ -23,7 +23,6 @@
 
   // Identidad visual (Sello Hanko)
   &__seal {
-    position: absolute;
     left: 0.5rem;
     height: 3rem;
     width: auto;

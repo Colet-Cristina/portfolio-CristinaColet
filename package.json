@@ -1,13 +1,15 @@
 {
-  "name": "plantilla_react",
+  "name": "portfolio-CristinaColet",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://github.com/Colet-Cristina/portfolio-CristinaColet",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "npx shx rm -rf docs && npm run build && npx shx mv dist docs && git add docs && git commit -m \"New deployment\" && git push"
   },
   "dependencies": {
     "react": "^19.2.0",

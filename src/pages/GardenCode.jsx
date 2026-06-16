@@ -1,6 +1,6 @@
 /* --- GARDEN-CODE: Lista de proyectos dinámicos y un modal con detalles. */
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import GardenFlower from "../components/GardenFlower";
 import projectsData from "../services/projectsData.json";
 
@@ -13,6 +13,10 @@ function GardenCode() {
   // Estados
   const [selectedProject, setSelectedProject] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Posición donde se empieza a tocar la pantalla
+  const [touchPosition, setTouchPosition] = useState(null);
+
   // Configuracón dinámica
   const isDesktop = window.innerWidth >= 768;
   const movementUnit = isDesktop ? 16 : 11;
@@ -20,14 +24,30 @@ function GardenCode() {
 
   // -----  EFECTOS -----
 
-  // Bloquea el scroll de la página principal cuando hay un modal activo
-  useEffect(() => {
-    if (selectedProject) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
+  // Funciones para el arrastre táctil
+  const handleTouchStart = (e) => {
+    const touchDown = e.touches[0].clientX;
+    setTouchPosition(touchDown);
+  };
+
+  const handleTouchMove = (e) => {
+    if (touchPosition === null) return;
+
+    const currentTouch = e.touches[0].clientX;
+    const diff = touchPosition - currentTouch;
+
+    // Movimiento a la izquierda, avanza
+    if (diff > 50) {
+      nextSlide();
+      setTouchPosition(null); // Reseteo
     }
-  }, [selectedProject]);
+
+    // Movimiento a la derecha, retrocede
+    if (diff < -50) {
+      prevSlide();
+      setTouchPosition(null);
+    }
+  };
 
   // Manejador de eventos
   const openModal = (project) => setSelectedProject(project);
@@ -68,7 +88,11 @@ function GardenCode() {
       <p className="garden__subtitle">Proyectos cultivados con código</p>
 
       {/* Contenedor que recorta lo que sobra */}
-      <div className="garden__slider-container">
+      <div
+        className="garden__slider-container"
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+      >
         <ul
           className="garden__list"
           style={{
@@ -92,7 +116,7 @@ function GardenCode() {
 
                   <div className="project__card-content">
                     <h3 className="project__card-name">{project.title}</h3>
-                    <span className="project__card-plus">info</span>
+                    <span className="project__card-plus">+ info</span>
                   </div>
                 </article>
                 {/* Tallo que conecta las flores */}

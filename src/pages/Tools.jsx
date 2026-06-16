@@ -26,7 +26,7 @@ function Tools() {
   const scrollCarousel = (direction) => {
     const container = carouselRef.current;
     if (container) {
-      // ¡Esto evita el error! Solo se mueve si el contenedor existe
+      // Esto evita el error. Solo se mueve si el contenedor existe
       const scrollAmount = 300;
       container.scrollBy({
         left: direction === "left" ? -scrollAmount : scrollAmount,
@@ -134,7 +134,6 @@ function Tools() {
         {showCertificates &&
           certificatesData &&
           certificatesData.length > 0 && (
-            // <div className="tools__modal-overlay">
             <div className="tools__modal-container">
               <ul className="tools__scroll-carousel" ref={carouselRef}>
                 {certificatesData.map((cert) => {
