@@ -32,10 +32,10 @@ function Roots() {
         <p className="roots__text roots__text--center">
           Puedes{" "}
           <a
-            href="/Cristina_Colet_CV.pdf"
+            href="./Cristina_Colet_CV.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="roots__cv-link js-cv-link"
+            className="roots__cv-link"
           >
             descargar mi CV aquí
           </a>

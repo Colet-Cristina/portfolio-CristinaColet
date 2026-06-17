@@ -116,7 +116,7 @@ function GardenCode() {
 
                   <div className="project__card-content">
                     <h3 className="project__card-name">{project.title}</h3>
-                    <span className="project__card-plus">+ info</span>
+                    <span className="project__card-plus">+ info ❯</span>
                   </div>
                 </article>
                 {/* Tallo que conecta las flores */}

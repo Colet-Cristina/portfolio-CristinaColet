@@ -1,7 +1,12 @@
 // --- ESTRUCTURA GLOBAL ---
 
-html {
+:root {
+  font-size: 62.5%;
   scroll-behavior: smooth;
+
+  @media (min-width: 1024px) {
+    font-size: 100%;
+  }
 }
 
 * {
