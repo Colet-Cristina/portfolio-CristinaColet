@@ -56,7 +56,7 @@
 }
 //
 
-/* --- GARDEN: Dinámicas de la Naturaleza --- */
+/* --- GARDEN --- */
 
 // Simulación de caída pétalos
 @keyframes sakuraFall {
@@ -98,17 +98,7 @@
 }
 
 // Entrada con subida suavemente mientras se vuelve visible
-@keyframes slideUp {
-  from {
-    transform: translateY(3.125rem);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-// Versión más corta y sutil de 'slideUp'
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -119,24 +109,7 @@
     transform: translateY(0);
   }
 }
-// Efecto de "florecimiento"
-@keyframes flowerPop {
-  0% {
-    opacity: 0;
-    // Empieza pequeño y un poco más abajo (donde estaría la flor)
-    transform: translate(-50%, -20%) scale(0);
-    filter: blur(0.625rem);
-  }
-  70% {
-    // Un ligero exceso para el efecto rebote
-    transform: translate(-50%, -52%) scale(1.05);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-    filter: blur(0);
-  }
-}
+
 /* Animación de brillo rápido */
 @keyframes flash-frame {
   0% {

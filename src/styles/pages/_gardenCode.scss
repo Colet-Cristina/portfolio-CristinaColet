@@ -8,7 +8,7 @@
   overflow: hidden;
   overflow-x: hidden;
 
-  animation: fadeInStone 2.4s ease-in-out both;
+  animation: fadeInStone 6s ease-in-out both;
 
   // Background: Representación visual del ciclo natural
   background: linear-gradient(
@@ -209,7 +209,6 @@
   align-items: center;
   z-index: 1000;
   padding: 1rem;
-  animation: fadeIn 0.3s ease;
 }
 
 // Caja del contenido
@@ -221,7 +220,7 @@
     $flower-petals-medium 70%,
     $flower-petals-outer 100%
   );
-  width: 90%; // Antes estaba en 90%, lo bajamos un pelín para que respire más en móvil
+  width: 90%;
   max-width: 20rem;
   border-radius: 2rem;
   position: relative;
