@@ -3,6 +3,7 @@
 import emailIcon from "../images/icons/email.png";
 import gitIcon from "../images/icons/git.png";
 import inIcon from "../images/icons/in.png";
+import cvIcon from "../images/icons/cv.png";
 
 function Hero() {
   return (
@@ -35,6 +36,7 @@ function Hero() {
             <img
               src={emailIcon}
               alt="Email"
+              title="Enviar correo"
               className="hero__social-icon"
               aria-hidden="true"
             />
@@ -51,6 +53,7 @@ function Hero() {
             <img
               src={gitIcon}
               alt="GitHub"
+              title="Perfil de GitHub"
               className="hero__social-icon"
               aria-hidden="true"
             />
@@ -67,6 +70,24 @@ function Hero() {
             <img
               src={inIcon}
               alt="LinkedIn"
+              title="Perfil de LinkedIn"
+              className="hero__social-icon"
+              aria-hidden="true"
+            />
+          </a>
+
+          {/* Acceso a Currículum Vitae */}
+          <a
+            href="./Cristina_Colet_CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hero__social-item"
+            aria-label="Ver o descargar Currículum Vitae en PDF (se abre en una nueva pestaña)"
+          >
+            <img
+              src={cvIcon}
+              alt="Currículum"
+              title="Descargar Currículum Vitae"
               className="hero__social-icon"
               aria-hidden="true"
             />

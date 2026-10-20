@@ -161,6 +161,12 @@
         filter: brightness(1.2) drop-shadow(0 0 0.3125rem rgba($color-red, 0.5));
       }
 
+      /* Mostrar el tooltip al pasar el ratón */
+      &:hover::after {
+        opacity: 1;
+        visibility: visible;
+      }
+
       img {
         width: 80%;
         height: auto;
