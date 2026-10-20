@@ -1,6 +1,16 @@
 [
   {
     "id": 1,
+    "title": "Family Today",
+    "description": "Aplicación web para la gestión familiar: control de citas, gastos compartidos, documentación y medicación con sincronización en la nube.",
+    "tech": ["React", "Firebase", "SCSS", "Vite"],
+    "link": " https://github.com/Colet-Cristina/gestiones-familiares",
+    "demo": "https://gestiones-familiares.vercel.app/",
+    "image": "FamilyToday.jpg"
+  },
+
+  {
+    "id": 2,
     "title": "Fauna Cards",
     "description": "Explorador de fauna ibérica con lógica de filtrado y un juego de memoria integrado.",
     "tech": ["HTML5", "CSS3", "JavaScript"],
@@ -9,7 +19,7 @@
     "image": "fauna.jpg"
   },
   {
-    "id": 2,
+    "id": 3,
     "title": "Harry Potter",
     "description": "Registro mágico desarrollado con React para catalogar personajes de Harry Potter a través de una interfaz moderna, reactiva y visual.",
     "tech": ["React", "React Router", "SASS", "API"],
@@ -18,7 +28,7 @@
     "image": "harry.jpg"
   },
   {
-    "id": 3,
+    "id": 4,
     "title": "Piedra, Papel, Tijera",
     "description": "Juego interactivo contra la computadora desarrollado en JavaScript Vanilla, enfocado en el dominio de la manipulación del DOM y eventos asíncronos.",
     "tech": ["HTML5", "CSS3", "JavaScript"],
